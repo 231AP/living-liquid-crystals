@@ -115,6 +115,59 @@ __global__ void updateConcentration(Particle PT,Parameter PM,double* Pxx, double
             
         }
         }
+
+        // for (int x = -1;x <= 1;x++) {
+        // for (int y = -1;y <= 1;y++) {
+        //     int kk1 =(i+x+PM.cellNumX)%PM.cellNumX;
+        //     int kk2 = (j+y+PM.cellNumY)%PM.cellNumY;
+        //     Concentration[idx] += a1*PT.cellOffsetsCL[(kk1)*blockDim.x+(kk2)];
+        //     // Pxx[idx] += a1*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
+        //     // Pxy[idx] += a1*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
+
+            
+        // }
+        // }
+        // for (int x = -2;x <= 2;x++) {
+        // for (int y = -2;y <= 2;y++) {
+        //     int kk1 =(i+x+PM.cellNumX)%PM.cellNumX;
+        //     int kk2 = (j+y+PM.cellNumY)%PM.cellNumY;
+        //     Concentration[idx] += a2*PT.cellOffsetsCL[(kk1)*blockDim.x+(kk2)];
+        //     // Pxx[idx] += a2*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
+        //     // Pxy[idx] += a2*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
+        // }
+        // }
+
+        // for (int x = -3;x <= 3;x++) {
+        // for (int y = -3;y <= 3;y++) {
+        //     int kk1 =(i+x+PM.cellNumX)%PM.cellNumX;
+        //     int kk2 = (j+y+PM.cellNumY)%PM.cellNumY;
+        //     Concentration[idx] += a3*PT.cellOffsetsCL[(kk1)*blockDim.x+(kk2)];
+        //     // Pxx[idx] += a3*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
+        //     // Pxy[idx] += a3*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
+        // }
+        // }
+
+        // for (int x = -4;x <= 4;x++) {
+        // for (int y = -4;y <= 4;y++) {
+        //     int kk1 =(i+x+PM.cellNumX)%PM.cellNumX;
+        //     int kk2 = (j+y+PM.cellNumY)%PM.cellNumY;
+        //     Concentration[idx] += a4*PT.cellOffsetsCL[(kk1)*blockDim.x+(kk2)];
+        //     // Pxx[idx] += a4*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
+        //     // Pxy[idx] += a4*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
+            
+        // }
+        // }
+
+        // for (int x = -5;x <= 5;x++) {
+        // for (int y = -5;y <= 5;y++) {
+        //     int kk1 =(i+x+PM.cellNumX)%PM.cellNumX;
+        //     int kk2 = (j+y+PM.cellNumY)%PM.cellNumY;
+        //     Concentration[idx] += a5*PT.cellOffsetsCL[(kk1)*blockDim.x+(kk2)];
+        //     // Pxx[idx] += a5*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
+        //     // Pxy[idx] += a5*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
+            
+        // }
+        // }
         if (Concentration[idx]>0){
             Pxx[idx]/= Concentration[idx];
             Pxy[idx]/= Concentration[idx];
