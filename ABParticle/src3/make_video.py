@@ -12,7 +12,7 @@ import os
 # "videoa05c0", "videoa05c001", "videoa05c002", "videoa05c003", "videoa05c004", "videoa05c005",  "videoa05c01" ,"videoa05c02", "videoa05c03", "videoa05c04", "videoa05c05", "videoa05c1", "videoa05c2" ,"videoa05c3", "videoa05c4", "videoa05c5",
 # "videoa2c0", "videoa2c001", "videoa2c002", "videoa2c003", "videoa2c004", "videoa2c005",  "videoa2c01" ,"videoa2c02", "videoa2c03", "videoa2c04", "videoa2c05", "videoa2c1", "videoa2c2" ,"videoa2c3", "videoa2c4", "videoa2c5",]
 savenames = [
-    "test04"
+    "test11"
 ]
 for savename in savenames:
     datadir ="../photo_video/" + savename +"/"

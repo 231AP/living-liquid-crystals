@@ -2,23 +2,21 @@ from moviepy.editor import ImageSequenceClip
 from PIL import Image
 import os
 def png_to_mp4(png_folder, output_file, fps):
-    # 获取指定文件夹中的所有png文件，并排序
+
     images = [os.path.join(png_folder, img) for img in sorted(os.listdir(png_folder)) if img.endswith(".png")]
     
     if not images:
-        raise ValueError("指定文件夹中没有PNG图片")
+        raise ValueError("no PNG")
     
-    # 打开第一张图片以获取其宽度和高度
     first_image = Image.open(images[0])
     width, height = first_image.size
     
-    # 创建视频剪辑
+    
     clip = ImageSequenceClip(images, fps=fps)
     
-    # 设置视频的宽度和高度
+
     clip = clip.resize(newsize=(width, height))
-    
-    # 写入MP4文件
+
     clip.write_videofile(output_file, codec='libx264')
 
 # savenames = [
@@ -31,13 +29,12 @@ def png_to_mp4(png_folder, output_file, fps):
 # "videoa2c0", "videoa2c001", "videoa2c002", "videoa2c003", "videoa2c004", "videoa2c005",  "videoa2c01" ,"videoa2c02", "videoa2c03", "videoa2c04", "videoa2c05", "videoa2c1", "videoa2c2" ,"videoa2c3", "videoa2c4", "videoa2c5",]
 
 savenames = [
-    "test02"
+    "test16"
 ]
 for savename in savenames:
-# 示例使用
-    png_folder = "/home/lyuan/share/LLC/ABParticle/ABParticle/photo_video/"+ savename + "/"
+    png_folder = "../photo_video/"+ savename + "/"
     output_file = png_folder + "../" + savename + ".mp4"
-    fps =10  # 指定帧率
+    fps =10  
 
 
 

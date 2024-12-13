@@ -24,21 +24,21 @@ using namespace std;
 int main() {
     
     // Simulation parameters
-    string direExpo="../data/test04/";
+    string direExpo="../data/test16/";
     // string direExpo='data/'
     string device="gpu";
     string FDMScheme="CentralDifferenceO2Iso2D";
     string timeScheme="EulerForward";
     double dt=0.001;
-    double T=3;
+    double T=10;
     double dtExpo=0.1;
-    int    NGrid=2*128;
+    int    NGrid=1*128;
     double L=128;//NGrid;
     // Model parameters
         
-    double a =1;
-    double AA =  -10; 
-    double xian = 0.5;
+    double a =2;
+    double AA =  -5; 
+    double xian = 0.05;
 
     double K = 10;
     double Gamma = 0.5;

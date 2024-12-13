@@ -159,8 +159,8 @@ V0=10
 vmax1 = 160
 
 # "N500cMean00005CoAA-3xian1",
-savenames = ["test04",]
-steph = 2
+savenames = ["test16",]
+steph = 1
 size = 128 * steph
 for savename in savenames:
 
@@ -236,6 +236,9 @@ for savename in savenames:
         anchy_df = pd.read_csv(datadir + "anchy_%d.dat"%time,header = None)
         C_df = pd.read_csv(datadir + "abParticle.Concentration_%d.dat"%time,header=None)
 
+        kk = pd.read_csv(datadir+"conf_%d"%time+".dat",sep=" ",header=None)
+         # print(kk.shape)
+        pts = np.array(kk)
 
     
         Pxx = np.array(Pxx_df).reshape(size,-1,order = "F").T
@@ -296,9 +299,9 @@ for savename in savenames:
      
         
         
-        fig = plt.figure(figsize = [30,20])
+        fig = plt.figure(figsize = [20,20])
 
-        ax = fig.add_subplot(2,3,1)
+        ax = fig.add_subplot(2,2,1)
         im = ax.imshow(S2,vmax =0.9,vmin= 0,norm=None,origin="lower")
         X,Y = np.meshgrid(np.arange(size),np.arange(size))
         xDP, xDM = detect_defect(theta)
@@ -364,7 +367,7 @@ for savename in savenames:
         
         
         
-        ax = fig.add_subplot(2,3,2)
+        ax = fig.add_subplot(2,2,2)
         # X,Y = np.meshgrid(np.arange(size),np.arange(size))
         # im = ax.imshow(omega,vmax = 5,vmin = -5 ,origin='lower', interpolation='gaussian', animated=True, cmap='jet')
         im = ax.imshow(omega,origin='lower', interpolation='gaussian', animated=True, cmap='jet')
@@ -398,7 +401,7 @@ for savename in savenames:
 
 
 
-        ax = fig.add_subplot(2,3,3)
+        ax = fig.add_subplot(2,2,3)
         im = ax.imshow(C,norm = None,origin='lower')
         # im = ax.imshow(cp+cm,vmax =0.6,vmin = 0,norm = None,origin='lower')
         # ax.scatter(xDP1, yDP1, c='black', marker='o', label='DP1')
@@ -413,8 +416,12 @@ for savename in savenames:
         ax.quiver(xDP1, yDP1, np.cos(theta_xDP[xDP > 0.5]), np.sin(theta_xDP[xDP > 0.5]), color='red')
         # ax.scatter(xDP1, yDP1, c='red', marker='o',label='LC_DP1')
         ax.legend(loc = 1)
-        
-        
+        ax = fig.add_subplot(2,2,4)
+    # print(pts.shape)
+        ax.quiver(pts[:,0],pts[:,1],100*pts[:,2],100*pts[:,3],0.01)
+    
+        ax.set_xlim(0,1*128)
+        ax.set_ylim(0,1*128)
         
         
         # cb = plt.colorbar(im,ax=ax,)
@@ -442,10 +449,10 @@ for savename in savenames:
         # ax.axis("off")
 
 
-        ax = fig.add_subplot(2,3,5)
+        # ax = fig.add_subplot(2,3,5)
         
-        im = ax.imshow(A2,vmax =0.9,vmin= 0,norm=None,origin="lower")
-        ax.quiver(X[::cut_size,::cut_size],Y[::cut_size,::cut_size],a1cut,a2cut,color = "red" ,angles='xy', scale_units='xy', scale=1/6, headwidth=0, headlength=0 ,headaxislength=0, pivot='middle')
+        # im = ax.imshow(A2,vmax =0.9,vmin= 0,norm=None,origin="lower")
+        # ax.quiver(X[::cut_size,::cut_size],Y[::cut_size,::cut_size],a1cut,a2cut,color = "red" ,angles='xy', scale_units='xy', scale=1/6, headwidth=0, headlength=0 ,headaxislength=0, pivot='middle')
         
         # c_mean = np.mean(c)
         # c_max = np.max(c)
@@ -479,7 +486,7 @@ for savename in savenames:
 
             
        
-        plt.savefig(savedir +"velocity%04d.png"%time)
+        plt.savefig(savedir +"Turbulence%04d.png"%time)
         plt.savefig(savedir + "../"+savename+ ".png")
         plt.close()
  

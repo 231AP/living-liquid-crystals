@@ -24,10 +24,10 @@ def ReadChange(targetdir,keywords,UseWords):
   
 basedir = "./"
 datadir = basedir
-names = ["bacteriaPolar.cu","create_matrix.py","draw_polar.py","DrawParticle.py","make_video.py","Bash.sh"]
+names = ["bacteriaPolar.cu","create_matrix.py","DrawTurbulence.py","visual_video.py","Bash.sh"]
 for name in names:
     print(name)
-    ReadChange(datadir+name,["test"],["04"])
+    ReadChange(datadir+name,["test"],["16"])
 subprocess.run(['bash',basedir+"Bash.sh" ])
 
             
