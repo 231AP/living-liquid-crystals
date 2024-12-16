@@ -111,6 +111,7 @@ void System::addABParticle (ABParticle* ABParticle_ptr_t) {
     addField(&(*ABParticle_ptr_t).Concentration);
     addField(&(*ABParticle_ptr_t).Pxx);
     addField(&(*ABParticle_ptr_t).Pxy);
+    addField(&(*ABParticle_ptr_t).C1);
     
 };
 // =======================================================================

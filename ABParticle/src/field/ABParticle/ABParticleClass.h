@@ -35,6 +35,7 @@ class ABParticle {
     Field Pxy;
     Field vx;
     Field vy;
+    Field C1;
 
 
     // Field;

@@ -472,14 +472,16 @@ void Init_Coords(int flag, Particle pt, Parameter PM) {
         // printf("12312313");
         std::default_random_engine e;
         std::uniform_real_distribution<double> u(0.0, 1.0);
+        // std::uniform_real_distribution<double> u1(0.0, 1.0);
         e.seed(time(0));
         for (int n = 0; n < PM.particleNum; n++) {
             int flag = 0;
             pt.x[n] = u(e) * PM.boxX;
             pt.y[n] = u(e) * PM.boxY;
 // printf("1");
-            pt.px[n] = 0.9;
-            pt.py[n] = 0;
+
+            pt.px[n] = cos(3140*u(e));
+            pt.py[n] = sin(3140*u(e));
 
 
 
@@ -560,8 +562,8 @@ void parameterInit() {
 void HostUpdataToDevice() {
     cudaMemcpy(PT.x, pt.x, PM.particleNum * sizeof(real), cudaMemcpyHostToDevice);
     cudaMemcpy(PT.y, pt.y, PM.particleNum * sizeof(real), cudaMemcpyHostToDevice);
-    // cudaMemcpy(pt.px, PT.px, PM.particleNum * sizeof(real), cudaMemcpyHostToDevice);
-    // cudaMemcpy(pt.py, PT.py, PM.particleNum * sizeof(real), cudaMemcpyHostToDevice);
+    cudaMemcpy(pt.px, PT.px, PM.particleNum * sizeof(real), cudaMemcpyHostToDevice);
+    cudaMemcpy(pt.py, PT.py, PM.particleNum * sizeof(real), cudaMemcpyHostToDevice);
 }
 
 //下载=============================================================================================
@@ -637,20 +639,20 @@ void ABParticleField::forceAndPositionUpdate(Particle PT, Parameter PM,int i_fie
 
 //=========================================================================
 
-void ABParticleField::CellPUpdate(Particle PT,Parameter PM,int i_field){
+// void ABParticleField::CellPUpdate(Particle PT,Parameter PM,int i_field){
     
-    int Nx=gridNumber().x;
-    int Ny=gridNumber().y;
-    int Nbx=gridNumberBoun().x;
-    int Nby=gridNumberBoun().y;
-    double dx=gridSize().x;
-    double dy=gridSize().y;
-    // printf("%d",PM.threadNum);
-    // cout <<"ABParticle detected3."<<endl;
+//     int Nx=gridNumber().x;
+//     int Ny=gridNumber().y;
+//     int Nbx=gridNumberBoun().x;
+//     int Nby=gridNumberBoun().y;
+//     double dx=gridSize().x;
+//     double dy=gridSize().y;
+//     // printf("%d",PM.threadNum);
+//     // cout <<"ABParticle detected3."<<endl;
     
-    updateConcentration << <Ny,Nx>> > (PT, PM,(*ptr_Pxx).f[i_field],(*ptr_Pxy).f[i_field],f[i_field], Nx, Ny, Nbx, Nby);
-// cout <<"ABParticle detected4."<<endl;
-};
+//     updateConcentration << <Ny,Nx>> > (PT, PM,(*ptr_Pxx).f[i_field],(*ptr_Pxy).f[i_field],f[i_field], Nx, Ny, Nbx, Nby);
+// // cout <<"ABParticle detected4."<<endl;
+// };
 
 
 
@@ -694,21 +696,13 @@ void ABParticleField::getConcentration(int i_field) {
     
 // 
     // if(i_field==0){
-    for (int t1 = 0; t1 <100; t1++){
+    for (int t1 = 0; t1 <PM.tExpo/PM.tStep; t1++){
         // printf("1");
         iterate(PT,PM,i_field);
     };
     getABParticlePxPy<<<Ny,Nx>>>(PT,PM,Nx,Ny);
-    updateConcentration << <Ny,Nx>> > (PT, PM,(*ptr_Pxx).f[i_field],(*ptr_Pxy).f[i_field],f[i_field], Nx, Ny, Nbx, Nby);
-    
-    
-    
-    // CellPUpdate(PT,PM,i_field);
-    
-    
-    // getLivingLCPxPyThetaGPU<<<Ny,Nx>>>((*ptr_flip).f[i_field],(*ptr_Pxx).f[i_field], f[i_field], (*ptr_px).f[i_field], (*ptr_py).f[i_field], (*ptr_theta).f[i_field], (*ptr_theta_old).f[i_field], Nx, Ny, Nbx, Nby);
-    // getLivingLCFlipGPU<<<Ny,Nx>>>((*ptr_Omega).f[i_field],(*ptr_cplus).f[i_field],(*ptr_cminus).f[i_field],(*ptr_theta_old).f[i_field], (*ptr_theta).f[i_field],(*ptr_flip).f[i_field], Nx, Ny, Nbx, Nby);
-    
+    updateConcentration << <Ny,Nx>> > (PT, PM,(*ptr_Pxx).f[i_field],(*ptr_Pxy).f[i_field],f[i_field],(*ptr_C1).f[i_field],Nx, Ny, Nbx, Nby);
+    smoothConcentration << <Ny,Nx>> > (PM,f[i_field],(*ptr_C1).f[i_field],Nx,Ny,Nbx,Nby);
     
     
     (*ptr_Pxx).applyBounCondPeriGPU((*ptr_Pxx).f[i_field]);
@@ -718,6 +712,7 @@ void ABParticleField::getConcentration(int i_field) {
     (*ptr_Qxy).applyBounCondPeriGPU((*ptr_Qxy).f[i_field]);
     (*ptr_vx).applyBounCondPeriGPU((*ptr_vx).f[i_field]);
     (*ptr_vy).applyBounCondPeriGPU((*ptr_vy).f[i_field]);
+    
     // };
     
 };

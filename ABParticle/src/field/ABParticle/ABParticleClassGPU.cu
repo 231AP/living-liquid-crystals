@@ -43,7 +43,7 @@ __global__ void getABParticlePxPy(Particle PT, Parameter PM, int Nx,int Ny) {
 
 
 
-__global__ void updateConcentration(Particle PT,Parameter PM,double* Pxx, double* Pxy, double* Concentration, int Nx, int Ny, int Nbx, int Nby) {
+__global__ void updateConcentration(Particle PT,Parameter PM,double* Pxx, double* Pxy, double* Concentration,double* C1, int Nx, int Ny, int Nbx, int Nby) {
     int i=blockIdx.x;
     int j=threadIdx.x;
     int idx=(blockDim.x+2*Nbx)*(i+Nby)+j+Nbx;
@@ -172,8 +172,9 @@ __global__ void updateConcentration(Particle PT,Parameter PM,double* Pxx, double
             Pxx[idx]/= Concentration[idx];
             Pxy[idx]/= Concentration[idx];
         }
-        
+        C1[idx] = Concentration[idx];
 
+        Concentration[idx] = 0;
 
         // Pxx[idx]=0;
         // Pxy[idx]=0;
@@ -195,6 +196,43 @@ __global__ void updateConcentration(Particle PT,Parameter PM,double* Pxx, double
     }
 };
 //=================================================================================
+
+
+
+
+
+
+
+
+
+
+__global__ void smoothConcentration(Parameter PM,double* Concentration,double* C1, int Nx, int Ny, int Nbx, int Nby) {
+    int i=blockIdx.x;
+    int j=threadIdx.x;
+    int idx=(blockDim.x+2*Nbx)*(i+Nby)+j+Nbx;
+   
+    
+    if (i<Ny && j<Nx) { 
+
+        for (int x = -2;x <= 2;x++) {
+        for (int y = -2;y <= 2;y++) {
+            int kk1 =(i+x+PM.cellNumX)%PM.cellNumX;
+            int kk2 = (j+y+PM.cellNumY)%PM.cellNumY;
+            int idx1 = (blockDim.x+2*Nbx)*(kk1+Nby)+kk2+Nbx;
+            Concentration[idx] += C1[idx1];
+        }
+        }
+        Concentration[idx] /= 25;
+
+  
+    }
+};
+//=================================================================================
+
+
+
+
+
 __global__ void initState(curandState* state,unsigned long long seed, int particleNum) {
     int id = blockIdx.x * blockDim.x + threadIdx.x;
     if (id >= particleNum)return;
@@ -244,19 +282,27 @@ __global__ void getCellList(Particle PT, Parameter PM) {
 
 
 
-
-
-
-
 __device__ int getNeighborListTry(real x0, real y0, real x1, real y1, Parameter PM) {
     real dx = sign(x1 - x0) * (x1 - x0);
     real dy = sign(y1 - y0) * (y1 - y0);
     dx = sign01(0.5 * PM.boxX - dx) * dx + sign01(dx - 0.5 * PM.boxX) * (PM.boxX - dx);
     dy = sign01(0.5 * PM.boxY - dy) * dy + sign01(dy - 0.5 * PM.boxY) * (PM.boxY - dy);
     real dr2 = dx * dx + dy * dy;
-    if (dr2 < PM.rd * PM.rd)return 1;
+    if (dr2 < (PM.rd+2*PM.rOutUpdateList) * (PM.rd+2*PM.rOutUpdateList))return 1;
     else return 0;
 }
+
+
+
+// __device__ int getNeighborListTry(real x0, real y0, real x1, real y1, Parameter PM) {
+//     real dx = sign(x1 - x0) * (x1 - x0);
+//     real dy = sign(y1 - y0) * (y1 - y0);
+//     dx = sign01(0.5 * PM.boxX - dx) * dx + sign01(dx - 0.5 * PM.boxX) * (PM.boxX - dx);
+//     dy = sign01(0.5 * PM.boxY - dy) * dy + sign01(dy - 0.5 * PM.boxY) * (PM.boxY - dy);
+//     real dr2 = dx * dx + dy * dy;
+//     if (dr2 < PM.rd * PM.rd)return 1;
+//     else return 0;
+// }
 
 //==========================================================================================================
 __global__ void getAroundCellParticleId(Particle PT, Parameter PM) {
@@ -439,10 +485,15 @@ __global__ void getForce (Particle PT, Parameter PM, double* vx, double* vy, dou
         // f12 = 1;
         // f12 = 0.01/pow(dr,6);
         // f12 = 24 * PM.epsilon * pow(PM.r0, 6) * (2 * pow(PM.r0, 6) - pow(dr, 6)) / pow(dr, 14);
-        f12 = 5/pow(dr,6);
+        if(dr<PM.rd){
+            f12 = 0.1/pow(dr,4);
+            PT.fx[id] += f12 * dx;
+            PT.fy[id] += f12 * dy;
+        }else f12 = 0;
+        
         // printf("%f",f12);
-        PT.fx[id] += f12 * dx ;
-        PT.fy[id] += f12 * dy ;
+        // PT.fx[id] += f12 * dx ;
+        // PT.fy[id] += f12 * dy ;
         if (PT.fx[id] > 10000 || PT.fx[id] < -10000 || PT.fy[id] > 10000 || PT.fy[id] < -10000) {
             break;
         }

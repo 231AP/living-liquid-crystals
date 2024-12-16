@@ -1,0 +1,62 @@
+# box X length
+512
+# box Y length
+512
+# x方向celllist大小
+1
+# y方向celllist大小
+1
+# x方向celllist个数
+512
+# y方向celllist个数
+512
+# 粒子密度
+4
+# 每个cell里粒子最大个数
+200
+# neighbor距离
+3
+# mask0
+5
+# mask1
+3
+# 每个粒子间的最小距离，用于位运算
+0.1
+# 粒子平衡距离r0
+1
+# 作用力的系数
+3
+# kBT
+0.5
+# 粘滞系数
+1
+# 近邻表更新临界位移
+1
+# 粒子总数
+2000
+# 开始时间
+0
+# 结束时间
+200
+# 时间步长
+0.0005
+# tExpo
+0.05
+# useField
+10
+# ABParticle
+1
+
+# x方向celllist大小
+8
+# y方向celllist大小
+8
+# x方向celllist个数
+64
+# y方向celllist个数
+64
+# 每个cell里粒子最大个数
+200
+# 近邻表更新临界位移
+1
+

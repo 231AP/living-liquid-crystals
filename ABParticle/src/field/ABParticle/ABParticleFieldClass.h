@@ -123,6 +123,7 @@ public:
     Field* ptr_Qxy;   
     Field* ptr_vx;
     Field* ptr_vy;
+    Field* ptr_C1;
 
    
     // ===========================================================

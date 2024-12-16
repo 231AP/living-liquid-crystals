@@ -67,11 +67,16 @@ void ABParticle::initFields () {
     setFieldProperties(&Concentration, name+".Concentration", priority , init_cond);
     setFieldProperties(&Pxx, name+".Pxx", -1, init_cond);
     setFieldProperties(&Pxy, name+".Pxy", -1, init_cond);
+    setFieldProperties(&C1, name+".C1", -1, init_cond);
+
+
+
     setFieldProperties(&Qxx,name+".Qxx",priority, init_cond);
     setFieldProperties(&Qxy,name+".Qxy",priority, init_cond);
     
     setFieldProperties(&vx,name+".vx",priority,init_cond);
     setFieldProperties(&vy,name+".vy",priority,init_cond);
+    
 
     
     Concentration.specialty="ABParticle";
@@ -82,6 +87,7 @@ void ABParticle::initFields () {
     Concentration.ptr_Qxy=&Qxy;
     Concentration.ptr_vx = &vx;
     Concentration.ptr_vy = &vy;
+    Concentration.ptr_C1 = &C1;
 
 
 
