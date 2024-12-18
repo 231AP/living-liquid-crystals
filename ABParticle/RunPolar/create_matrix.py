@@ -4,7 +4,7 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 
-savenames = ["test49",]
+savenames = ["test61",]
 
 for savename in savenames:
     datadir = "../data/"+savename+"/"
@@ -94,11 +94,11 @@ def CreateMatrixS1(lenth_x,lenth_y,L):
 # lenth_y = 128
 # L = 32
 steph = 1
-size = 512 * steph
-lenth_x = 512
-lenth_y = 512
+size = 256 * steph
+lenth_x = 256
+lenth_y = 256
 
-L = 128
+L = 64
 anxx,anxy = CreateMatrixF(lenth_x,lenth_y,L)
 # anxx,anxy = CreateMatrixS1(lenth_x,lenth_y,L)
 

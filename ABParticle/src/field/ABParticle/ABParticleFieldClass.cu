@@ -75,25 +75,21 @@ void ABParticleField::initPolarField() {
 
 void ExpoConf(const std::string& str_t) {
     std::ofstream ConfFile;
-    //设置输出精度
     int PrecData = 8;
-
-    // 文件名
-    std::string ConfFileName = "conf_" + str_t + ".dat";
+    std::string ConfFileName = "../data/test61/conf_" + str_t + ".dat";
     ConfFile.open(ConfFileName.c_str());
 
     if (!ConfFile.is_open()) {
-        std::cerr << "无法打开文件: " << ConfFileName << std::endl;
+        std::cerr << "Can't Open File: " << ConfFileName << std::endl;
         return;
     }
     for (int idx = 0; idx < PM.particleNum; idx++) {
-        // 使用固定格式和精度输出数据
         ConfFile << std::fixed << std::setprecision(PrecData)
             << pt.x[idx] << ' '
             << pt.y[idx] << ' '
             << pt.px[idx] << ' '
             << pt.py[idx] << ' ';
-        ConfFile << std::endl; // 换行
+        ConfFile << std::endl; 
     }
 
     ConfFile.close();
@@ -226,7 +222,7 @@ void getInput() {
     while (std::getline(InputFile, line)) {
         // 检查是否为注释行
         if (line.empty() || line.find('#') != std::string::npos) {
-            continue; // 跳过空行和注释行
+            continue; // 
         }
 
         std::istringstream iss(line);
@@ -263,7 +259,7 @@ void getInput() {
         case 27: iss >> PM.cellNumY1; break;
         case 28: iss >> PM.maxParticlePerCell1; break;
         case 29: iss >> PM.rOutUpdateList1; break;
-        default: break; // 超过预期行数时不处理
+        default: break; // 
         }
         lineCount++;
     }
@@ -436,27 +432,22 @@ void printInput() {
 //=============================================================================
 
 void Init_Coords(int flag, Particle pt, Parameter PM) {
-    /*
-    flag代表系统的初始化方式，flag=0代表均匀分布，flag=1代表随机分布
-    当按照均匀分布时，需给定粒子密度，会同时按照初始粒子数目,初始系统的周期盒大小；
-    当按照随机分布时，需给定粒子数目，随机生成粒子坐标
-    */
-// printf("撒到家啊了肯德基论文框架");
+   
     if (flag == 0) {
 
     //    printf("12312313");
-        //初始周期盒长度
+  
         int N = PM.particleNum;
         real rho = PM.rho;
         real L = sqrt(N / rho);
-        //考虑正方形盒子
+   
         real xBox = L;
         real yBox = L;
         PM.boxX = xBox;
         PM.boxY = yBox;
-        int initUcell = sqrt(N); //初始x,y,方向粒子数目
-        real d_lattice = L / sqrt(N); //晶格间距
-        //均匀分布 系统以原点为中心
+        int initUcell = sqrt(N); 
+        real d_lattice = L / sqrt(N); 
+
         int n, nx, ny;
         n = 0;
         for (ny = 0;ny < initUcell; ny++) {
@@ -467,7 +458,7 @@ void Init_Coords(int flag, Particle pt, Parameter PM) {
             }
         }
     }
-    //随机分布 均匀分布的随机数生成器
+
     else if (flag == 1) {
         // printf("12312313");
         std::default_random_engine e;
@@ -487,36 +478,28 @@ void Init_Coords(int flag, Particle pt, Parameter PM) {
 
             while (1) {
                 for (int m = 0; m < n; m++) {
-                    // 计算两个粒子之间的距离，考虑周期性边界条件
+
                     float dx = fmod((pt.x[n] - pt.x[m] + PM.boxX), PM.boxX);
                     float dy = fmod((pt.y[n] - pt.y[m] + PM.boxY), PM.boxY);
 
 
-
-
-
-                    // 若计算结果为负数，则调整到正值
                     if (dx > PM.boxX / 2) dx -= PM.boxX;
                     if (dy > PM.boxY / 2) dy -= PM.boxY;
 
-                    // 计算距离的平方
+   
                     float dist2 = dx * dx + dy * dy;
-
-                    // 如果距离小于某个阈值（如 r0/2），则重新生成位置
                     if (dist2 < PM.r0 * PM.r0) {
                         flag = 1;
                         break;
                     }
                 }
-
-                // 如果找到距离太近的粒子，重新生成位置
                 if (flag == 1) {
                     pt.x[n] = u(e) * PM.boxX;
                     pt.y[n] = u(e) * PM.boxY;
                     flag = 0;
                 }
                 else {
-                    break;  // 如果所有的粒子距离都合适，退出循环
+                    break; 
                 }
             }
 
@@ -524,18 +507,17 @@ void Init_Coords(int flag, Particle pt, Parameter PM) {
         }
     }
     else if (flag == 2) {
-        // printf("12312313");
-        //计算粒子数
+ 
         int n = 0;
         int Ln = sqrt(PM.particleNum);
-        //计算间距
+
         real dx = PM.boxX / (Ln - 1);
         real dy = PM.boxY / (Ln - 1);
-        // 生成二维晶格的格点
+
         for (int i = 0; i < Ln; i++) {
             for (int j = 0; j < Ln; j++) {
-                real x = j * dx; // 计算x坐标
-                real y = i * dy; // 计算y坐标
+                real x = j * dx; 
+                real y = i * dy; 
                 pt.x[n] = x;
                 pt.y[n] = y;
                 n++;
@@ -699,7 +681,11 @@ void ABParticleField::getConcentration(int i_field) {
     for (int t1 = 0; t1 <PM.tExpo/PM.tStep; t1++){
         // printf("1");
         iterate(PT,PM,i_field);
+       
+
+        findConcentration  << <Ny,Nx>> > (PT, PM,(*ptr_C1).f[i_field],Nx, Ny, Nbx, Nby);
     };
+    // updateConcentration << <Ny,Nx>> > (PT, PM,(*ptr_Pxx).f[i_field],(*ptr_Pxy).f[i_field],f[i_field],(*ptr_C1).f[i_field],Nx, Ny, Nbx, Nby);
     getABParticlePxPy<<<Ny,Nx>>>(PT,PM,Nx,Ny);
     updateConcentration << <Ny,Nx>> > (PT, PM,(*ptr_Pxx).f[i_field],(*ptr_Pxy).f[i_field],f[i_field],(*ptr_C1).f[i_field],Nx, Ny, Nbx, Nby);
     smoothConcentration << <Ny,Nx>> > (PM,f[i_field],(*ptr_C1).f[i_field],Nx,Ny,Nbx,Nby);

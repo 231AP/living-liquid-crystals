@@ -9,13 +9,13 @@ ABParticle=1
 
 celllist_size_x=1
 celllist_size_y=1
-celllist_count_x=512
-celllist_count_y=512
+celllist_count_x=256
+celllist_count_y=256
 
 celllist_size_x1=8
 celllist_size_y1=8
-celllist_count_x1=64
-celllist_count_y1=64
+celllist_count_x1=32
+celllist_count_y1=32
 box_x_length=$((celllist_size_x*celllist_count_x))
 box_y_length=$((celllist_size_y*celllist_count_y))
 echo $box_x_length
@@ -23,7 +23,7 @@ echo $box_x_length
 particle_density=4
 max_particles_per_cell=200
 max_particles_per_cell1=200
-neighbor_distance=3
+neighbor_distance=6
 mask0=5
 mask1=3
 min_distance=0.1
@@ -33,11 +33,12 @@ kBT=0.5
 viscosity_coefficient=1
 neighbor_update_threshold=1
 neighbor_update_threshold1=1
-total_particles=2000
+total_particles=500
 start_time=0
 end_time=200
-time_step=0.0005
-tExpo=0.05
+
+time_step=0.0001
+tExpo=0.001
 
 dir_name="boxX${box_x_length}_boxY${box_y_lenth}_particles${total_particles}_endTime${end_time}_kBT${kBT}"
 echo $dir_name

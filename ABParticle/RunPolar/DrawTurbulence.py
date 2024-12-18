@@ -159,9 +159,9 @@ V0=10
 vmax1 = 160
 
 # "N500cMean00005CoAA-3xian1",
-savenames = ["test49",]
+savenames = ["test61",]
 steph = 1
-size = 512 * steph
+size = 256 * steph
 for savename in savenames:
 
     # datadir = "/home/lyuan/share/LLC/T_phase/data/heat_Dc10/4NL128/"+savename+"/"

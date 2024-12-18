@@ -24,33 +24,33 @@ using namespace std;
 int main() {
     
     // Simulation parameters
-    string direExpo="../data/test49/";
+    string direExpo="../data/test61/";
     // string direExpo='data/'
     string device="gpu";
     string FDMScheme="CentralDifferenceO2Iso2D";
     string timeScheme="EulerForward";
     double dt=0.001;
-    double T=10;
-    double dtExpo=0.1;
-    int    NGrid=1*512;
-    double L=512;//NGrid;
+    double T=100;
+    double dtExpo=1;
+    int    NGrid=1*256;
+    double L=256;//NGrid;
     // Model parameters
         
     double a =1;
-    double AA =  -8; 
+    double AA =  -30; 
     double xian = 0.5;
 
     double K = 10;
     double Gamma = 0.5;
     double eta = 0.5;
-    double h = 20;
+    double h = 50;
     double xi = 0.9;  
     double b = 4;
 
     
 
     
-    double zta = 12*eta/h/2;
+    double zta = 12*eta/h/h;
     
     
     
