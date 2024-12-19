@@ -96,7 +96,7 @@ void Evolver::getRHS(int i_field) {
             }else if ((*f_ptr_i).specialty=="ABParticle") {
                 cout <<"ABParticle detected0."<<endl;
                 ABParticleField* f_ptr_temp = (ABParticleField*) f_ptr_i;
-                (*f_ptr_temp).getConcentration(i_field);
+                (*f_ptr_temp).ParticleToField(i_field);
                 cout <<"ABParticle detected1."<<endl;
             };
     
@@ -252,7 +252,7 @@ void Evolver::fieldsUpdate(int i_f_new, int i_f_old, int i_df, double time_step_
             } else if ((*f_ptr_i).specialty=="ABParticle") {
 	    //   cout <<"ABParticle detected2."<<endl;
                ABParticleField* f_ptr_temp = (ABParticleField*) f_ptr_i;
-                (*f_ptr_temp).getConcentration(i_f_new);
+                (*f_ptr_temp).ParticleToField(i_f_new);
                 // cout <<"ABParticle detected3."<<endl;
             };
         };        

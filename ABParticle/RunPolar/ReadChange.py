@@ -27,7 +27,11 @@ datadir = basedir
 names = ["../src/field/ABParticle/ABParticleFieldClass.cu","bacteriaPolar.cu","create_matrix.py","DrawTurbulence.py","visual_video.py","Bash.sh"]
 for name in names:
     print(name)
-    ReadChange(datadir+name,["test"],["61"])
+    ReadChange(datadir+name,["test"],["75"])
+# names1 = []
+# for name in names1:
+#     print(name)
+#     ReadChange(datadir+name,[""])
 subprocess.run(['bash',basedir+"Bash.sh" ])
 
             

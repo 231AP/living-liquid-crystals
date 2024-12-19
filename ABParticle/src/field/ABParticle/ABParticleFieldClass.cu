@@ -76,7 +76,7 @@ void ABParticleField::initPolarField() {
 void ExpoConf(const std::string& str_t) {
     std::ofstream ConfFile;
     int PrecData = 8;
-    std::string ConfFileName = "../data/test61/conf_" + str_t + ".dat";
+    std::string ConfFileName = "../data/test75/conf_" + str_t + ".dat";
     ConfFile.open(ConfFileName.c_str());
 
     if (!ConfFile.is_open()) {
@@ -469,11 +469,13 @@ void Init_Coords(int flag, Particle pt, Parameter PM) {
             int flag = 0;
             pt.x[n] = u(e) * PM.boxX;
             pt.y[n] = u(e) * PM.boxY;
+            // printf("1");
 // printf("1");
 
             pt.px[n] = cos(3140*u(e));
             pt.py[n] = sin(3140*u(e));
-
+            // pt.px[n] =-1;
+            // pt.py[n] = 0;
 
 
             while (1) {
@@ -544,8 +546,8 @@ void parameterInit() {
 void HostUpdataToDevice() {
     cudaMemcpy(PT.x, pt.x, PM.particleNum * sizeof(real), cudaMemcpyHostToDevice);
     cudaMemcpy(PT.y, pt.y, PM.particleNum * sizeof(real), cudaMemcpyHostToDevice);
-    cudaMemcpy(pt.px, PT.px, PM.particleNum * sizeof(real), cudaMemcpyHostToDevice);
-    cudaMemcpy(pt.py, PT.py, PM.particleNum * sizeof(real), cudaMemcpyHostToDevice);
+    cudaMemcpy(PT.px, pt.px, PM.particleNum * sizeof(real), cudaMemcpyHostToDevice);
+    cudaMemcpy(PT.py, pt.py, PM.particleNum * sizeof(real), cudaMemcpyHostToDevice);
 }
 
 //下载=============================================================================================
@@ -609,11 +611,7 @@ void ABParticleField::forceAndPositionUpdate(Particle PT, Parameter PM,int i_fie
     int Nby=gridNumberBoun().y;
     double dx=gridSize().x;
     double dy=gridSize().y;
-
-
-
     getForce << <PM.blockNum, PM.threadNum>> > (PT, PM,(*ptr_vx).f[i_field],(*ptr_vy).f[i_field],(*ptr_Pxx).f[i_field],(*ptr_Pxy).f[i_field],(*ptr_Qxx).f[i_field],(*ptr_Qxy).f[i_field], Nx, Ny, Nbx, Nby);
-
     cudaDeviceSynchronize();
     updatePosition << <PM.blockNum, PM.threadNum >> > (PT, PM);
     cudaDeviceSynchronize();
@@ -666,7 +664,7 @@ void ABParticleField::iterate(Particle PT,Parameter PM,int i_field) {
 //     int Nx = 
 
 // }
-void ABParticleField::getConcentration(int i_field) {
+void ABParticleField::ParticleToField(int i_field) {
 // void ABParticleField::getConcentration(int i_field) {
     // Get velocity from vorticity field
     int Nx=gridNumber().x;
@@ -675,21 +673,20 @@ void ABParticleField::getConcentration(int i_field) {
     int Nby=gridNumberBoun().y;
     double dx=gridSize().x;
     double dy=gridSize().y;
-    
-// 
-    // if(i_field==0){
-    for (int t1 = 0; t1 <PM.tExpo/PM.tStep; t1++){
-        // printf("1");
-        iterate(PT,PM,i_field);
-       
 
-        findConcentration  << <Ny,Nx>> > (PT, PM,(*ptr_C1).f[i_field],Nx, Ny, Nbx, Nby);
+    for (int t1 = 0; t1 <PM.tExpo/PM.tStep; t1++){
+        iterate(PT,PM,i_field);
+        // printf("1");
     };
-    // updateConcentration << <Ny,Nx>> > (PT, PM,(*ptr_Pxx).f[i_field],(*ptr_Pxy).f[i_field],f[i_field],(*ptr_C1).f[i_field],Nx, Ny, Nbx, Nby);
     getABParticlePxPy<<<Ny,Nx>>>(PT,PM,Nx,Ny);
-    updateConcentration << <Ny,Nx>> > (PT, PM,(*ptr_Pxx).f[i_field],(*ptr_Pxy).f[i_field],f[i_field],(*ptr_C1).f[i_field],Nx, Ny, Nbx, Nby);
-    smoothConcentration << <Ny,Nx>> > (PM,f[i_field],(*ptr_C1).f[i_field],Nx,Ny,Nbx,Nby);
-    
+    updateConcentration << <Ny,Nx>> > (PT, PM,(*ptr_Pxx).f[i_field],(*ptr_Pxy).f[i_field],(*ptr_C1).f[i_field],Nx, Ny, Nbx, Nby);
+    // printf("1");
+     for (int t2 = 0; t2 <100; t2++){
+        (*ptr_C1).applyBounCondPeriGPU((*ptr_C1).f[i_field]);
+        smoothConcentration << <Ny,Nx>> > (PM,(*ptr_C1).f[i_field],Nx,Ny,Nbx,Nby);
+    };
+
+    getConcentration << <Ny,Nx>> > (f[i_field],(*ptr_C1).f[i_field],Nx,Ny,Nbx,Nby);
     
     (*ptr_Pxx).applyBounCondPeriGPU((*ptr_Pxx).f[i_field]);
     // (*ptr_Concentration).applyBounCondPeriGPU((*ptr_Concentration).f[i_field]);

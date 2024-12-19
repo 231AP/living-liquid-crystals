@@ -159,9 +159,10 @@ V0=10
 vmax1 = 160
 
 # "N500cMean00005CoAA-3xian1",
-savenames = ["test61",]
+savenames = ["test75",]
+time_range = np.arange(1,100)
 steph = 1
-size = 256 * steph
+size = 128 * steph
 for savename in savenames:
 
     # datadir = "/home/lyuan/share/LLC/T_phase/data/heat_Dc10/4NL128/"+savename+"/"
@@ -223,7 +224,7 @@ for savename in savenames:
     bin_vyhc = np.zeros(vmax1)
     bin_vxlc = np.zeros(vmax1)
     bin_vylc = np.zeros(vmax1)
-    for time in np.arange(1,100):
+    for time in time_range:
 
         omega_df = pd.read_csv(datadir + "incompFlow.omega_%d.dat"%time,header=None)
         vx_df = pd.read_csv(datadir + "incompFlow.vx_%d.dat"%time,header=None)
@@ -370,7 +371,7 @@ for savename in savenames:
         ax = fig.add_subplot(2,2,2)
         # X,Y = np.meshgrid(np.arange(size),np.arange(size))
         # im = ax.imshow(omega,vmax = 5,vmin = -5 ,origin='lower', interpolation='gaussian', animated=True, cmap='jet')
-        im = ax.imshow(omega,origin='lower',vmax = 6,vmin = -6, interpolation='gaussian', animated=True, cmap='jet')
+        im = ax.imshow(omega,origin='lower',interpolation='gaussian', animated=True, cmap='jet')
         ax.quiver(X[::cut_size,::cut_size],Y[::cut_size,::cut_size],vx[::cut_size,::cut_size],vy[::cut_size,::cut_size])
         # ax.set_xlabel(None)
 

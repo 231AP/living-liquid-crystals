@@ -24,7 +24,7 @@ using namespace std;
 int main() {
     
     // Simulation parameters
-    string direExpo="../data/test61/";
+    string direExpo="../data/test75/";
     // string direExpo='data/'
     string device="gpu";
     string FDMScheme="CentralDifferenceO2Iso2D";
@@ -32,18 +32,18 @@ int main() {
     double dt=0.001;
     double T=100;
     double dtExpo=1;
-    int    NGrid=1*256;
-    double L=256;//NGrid;
+    int    NGrid=1*128;
+    double L=128;//NGrid;
     // Model parameters
         
-    double a =1;
-    double AA =  -30; 
+    double a =-0.2;
+    double AA =  -2; 
     double xian = 0.5;
 
     double K = 10;
     double Gamma = 0.5;
     double eta = 0.5;
-    double h = 50;
+    double h = 10;
     double xi = 0.9;  
     double b = 4;
 

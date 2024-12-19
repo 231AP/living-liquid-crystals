@@ -139,7 +139,7 @@ public:
     
     // Get velocity field
     void initPolarField();
-    void getConcentration(int i_field);
+    void ParticleToField(int i_field);
     // void getConcentration(int i_field);
     void forceAndPositionUpdate(Particle PT, Parameter PM,int i_field);
     void iterate(Particle PT, Parameter PM,int i_field);
