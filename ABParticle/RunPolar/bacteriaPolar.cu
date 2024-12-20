@@ -24,13 +24,13 @@ using namespace std;
 int main() {
     
     // Simulation parameters
-    string direExpo="../data/test06/";
+    string direExpo="../data/test10/";
     // string direExpo='data/'
     string device="gpu";
     string FDMScheme="CentralDifferenceO2Iso2D";
     string timeScheme="EulerForward";
     double dt=0.001;
-    double T=100;
+    double T=300;
     double dtExpo=1;
     int    NGrid=1*128;
     double L=128;//NGrid;
@@ -38,7 +38,7 @@ int main() {
         
     double a =1;
     // double AA =  -1; 
-    double AA =  -5; 
+    double AA =  -10; 
 
     double xian = 0.2;
     // double xian = 0;

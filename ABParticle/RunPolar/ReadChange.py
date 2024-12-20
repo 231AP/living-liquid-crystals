@@ -31,7 +31,7 @@ for name in names:
     # print(name)
     # keywords = ["AA","NumParticles"]
     # usewords = [AA,NumParticles]
-    ReadChange(datadir+name,["test"],["06"])
+    ReadChange(datadir+name,["test"],["10"])
 # names1 = []
 # for name in names1:
 #     print(name)

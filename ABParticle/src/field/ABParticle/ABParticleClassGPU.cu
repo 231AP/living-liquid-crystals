@@ -467,7 +467,7 @@ __global__ void getForce (Particle PT, Parameter PM, double* vx, double* vy, dou
         // f12 = 0.01/pow(dr,6);
         // f12 = 24 * PM.epsilon * pow(PM.r0, 6) * (2 * pow(PM.r0, 6) - pow(dr, 6)) / pow(dr, 14);
         if(dr<PM.rd){
-            f12 = 1/pow(dr,6);
+            f12 = 10/pow(dr,4);
             // f12 = 0;
             PT.fx[id] += f12 * dx;
             PT.fy[id] += f12 * dy;

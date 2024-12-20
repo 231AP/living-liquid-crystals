@@ -1,6 +1,6 @@
 python3 create_matrix.py;
 bash run.sh;
-savedir="../data/test06/"
+savedir="../data/test10/"
 src1dir=$savedir"RunPolar"
 mkdir $src1dir
 cp -r ../src $savedir

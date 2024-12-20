@@ -76,7 +76,7 @@ void ABParticleField::initPolarField() {
 void ExpoConf(const std::string& str_t) {
     std::ofstream ConfFile;
     int PrecData = 8;
-    std::string ConfFileName = "../data/test06/conf_" + str_t + ".dat";
+    std::string ConfFileName = "../data/test10/conf_" + str_t + ".dat";
     ConfFile.open(ConfFileName.c_str());
 
     if (!ConfFile.is_open()) {
