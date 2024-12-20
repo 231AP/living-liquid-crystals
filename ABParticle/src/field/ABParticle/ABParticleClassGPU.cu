@@ -106,8 +106,6 @@ __global__ void updateConcentration(Particle PT,Parameter PM,double* Pxx, double
             C1[idx] += a1*PT.cellOffsetsCL[(kk1)*blockDim.x+(kk2)];
             Pxx[idx] += a1*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
             Pxy[idx] += a1*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
-
-            
         }
         }
         for (int x = -2;x <= 2;x++) {
@@ -196,7 +194,7 @@ __global__ void getConcentration(double* Concentration,double* C1, int Nx, int N
 };
 
 
-__global__ void smoothConcentration(Parameter PM,double* C1, int Nx, int Ny, int Nbx, int Nby) {
+__global__ void smoothConcentration(Parameter PM,double* C1,double* Pxx,double* Pxy, int Nx, int Ny, int Nbx, int Nby) {
     int i=blockIdx.x;
     int j=threadIdx.x;
     int idx=(blockDim.x+2*Nbx)*(i+Nby)+j+Nbx;
@@ -206,6 +204,8 @@ __global__ void smoothConcentration(Parameter PM,double* C1, int Nx, int Ny, int
     
     if (i<Ny && j<Nx) { 
         C1[idx] += dt11 * D * LaplO4I(C1,di,idx);
+        Pxx[idx] += dt11 * D * LaplO4I(Pxx,di,idx);
+        Pxy[idx] += dt11 * D * LaplO4I(Pxy,di,idx);
     }
 };
 //=================================================================================

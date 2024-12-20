@@ -34,7 +34,7 @@ kBT=0.01
 viscosity_coefficient=1
 neighbor_update_threshold=1
 neighbor_update_threshold1=1
-total_particles=1000
+NumParticles=1000
 start_time=0
 end_time=200
 
@@ -80,7 +80,7 @@ $viscosity_coefficient
 # 近邻表更新临界位移
 $neighbor_update_threshold
 # 粒子总数
-$total_particles
+$NumParticles
 # 开始时间
 $start_time
 # 结束时间

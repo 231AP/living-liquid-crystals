@@ -12,7 +12,7 @@ def ReadChange(targetdir,keywords,UseWords):
     with open(targetdir,"rt+") as f:
         p1 = f.tell()
     # print(p1)
-        for i in range(1):
+        for i in range(len(keywords)):
             p1 = FindKeyPosition(f,keywords[i],p1)
             f.seek(p1)
             f.write(UseWords[i])
@@ -25,9 +25,13 @@ def ReadChange(targetdir,keywords,UseWords):
 basedir = "./"
 datadir = basedir
 names = ["../src/field/ABParticle/ABParticleFieldClass.cu","bacteriaPolar.cu","create_matrix.py","DrawTurbulence.py","visual_video.py","Bash.sh"]
+# AA = -20
+# NumParticles = 800
 for name in names:
-    print(name)
-    ReadChange(datadir+name,["test"],["97"])
+    # print(name)
+    # keywords = ["AA","NumParticles"]
+    # usewords = [AA,NumParticles]
+    ReadChange(datadir+name,["test"],["06"])
 # names1 = []
 # for name in names1:
 #     print(name)

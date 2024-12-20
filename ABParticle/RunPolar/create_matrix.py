@@ -4,7 +4,7 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 
-savenames = ["test97",]
+savenames = ["test06",]
 
 for savename in savenames:
     datadir = "../data/"+savename+"/"

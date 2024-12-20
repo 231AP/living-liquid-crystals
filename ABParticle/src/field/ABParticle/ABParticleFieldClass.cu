@@ -76,7 +76,7 @@ void ABParticleField::initPolarField() {
 void ExpoConf(const std::string& str_t) {
     std::ofstream ConfFile;
     int PrecData = 8;
-    std::string ConfFileName = "../data/test75/conf_" + str_t + ".dat";
+    std::string ConfFileName = "../data/test06/conf_" + str_t + ".dat";
     ConfFile.open(ConfFileName.c_str());
 
     if (!ConfFile.is_open()) {
@@ -683,7 +683,7 @@ void ABParticleField::ParticleToField(int i_field) {
     // printf("1");
      for (int t2 = 0; t2 <100; t2++){
         (*ptr_C1).applyBounCondPeriGPU((*ptr_C1).f[i_field]);
-        smoothConcentration << <Ny,Nx>> > (PM,(*ptr_C1).f[i_field],Nx,Ny,Nbx,Nby);
+        smoothConcentration << <Ny,Nx>> > (PM,(*ptr_C1).f[i_field],(*ptr_Pxx).f[i_field],(*ptr_Pxy).f[i_field],Nx,Ny,Nbx,Nby);
     };
 
     getConcentration << <Ny,Nx>> > (f[i_field],(*ptr_C1).f[i_field],Nx,Ny,Nbx,Nby);

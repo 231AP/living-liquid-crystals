@@ -159,7 +159,7 @@ V0=10
 vmax1 = 160
 
 # "N500cMean00005CoAA-3xian1",
-savenames = ["test97",]
+savenames = ["test06",]
 time_range = np.arange(1,100)
 steph = 1
 size = 128 * steph

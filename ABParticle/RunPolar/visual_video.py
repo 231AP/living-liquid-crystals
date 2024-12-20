@@ -29,7 +29,7 @@ def png_to_mp4(png_folder, output_file, fps):
 # "videoa2c0", "videoa2c001", "videoa2c002", "videoa2c003", "videoa2c004", "videoa2c005",  "videoa2c01" ,"videoa2c02", "videoa2c03", "videoa2c04", "videoa2c05", "videoa2c1", "videoa2c2" ,"videoa2c3", "videoa2c4", "videoa2c5",]
 
 savenames = [
-    "test97"
+    "test06"
 ]
 for savename in savenames:
     png_folder = "../photo_video/"+ savename + "/"
