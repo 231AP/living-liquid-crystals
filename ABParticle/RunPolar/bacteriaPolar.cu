@@ -24,33 +24,35 @@ using namespace std;
 int main() {
     
     // Simulation parameters
-    string direExpo="../data/test75/";
+    string direExpo="../data/test97/";
     // string direExpo='data/'
     string device="gpu";
     string FDMScheme="CentralDifferenceO2Iso2D";
     string timeScheme="EulerForward";
     double dt=0.001;
-    double T=100;
-    double dtExpo=1;
+    double T=30;
+    double dtExpo=0.3;
     int    NGrid=1*128;
     double L=128;//NGrid;
     // Model parameters
         
-    double a =-0.2;
-    double AA =  -2; 
-    double xian = 0.5;
+    double a =1;
+    // double AA =  -1; 
+    double AA =  -10; 
 
-    double K = 10;
-    double Gamma = 0.5;
+    double xian = 0.2;
+    // double xian = 0;
+
+    double K = 1;
+    double Gamma = 1;
     double eta = 0.5;
-    double h = 10;
+    double h = 4;
     double xi = 0.9;  
-    double b = 4;
-
-    
+    double b = 2;
 
     
     double zta = 12*eta/h/h;
+
     
     
     
@@ -76,7 +78,6 @@ int main() {
 
     // Velocity
     IncompFlow incompFlow(&mesh, "incompFlow",1);
-    
     Field dxvx(&mesh,"dxvx",1,"sin","periodic","off");
     Field dxvy(&mesh,"dxvy",1,"sin","periodic","off");
     Field dyvx(&mesh,"dyvx",1,"sin","periodic","off");    
@@ -211,14 +212,17 @@ int main() {
         {-xi,{{&Hxx}}},
         {2*xi,{{&abParticle.Qxx},{&trQH}}},
         {xi,{{&trQH}}},
+
+        // {AA,{{&abParticle.Qxx}}},
         {AA,{{&abParticle.Concentration},{&abParticle.Pxx}}},
-        // {AA,{{&abParticle.Concentrationminus},{&abParticle.Pxx}}}
+      
     });
     sigmaSxy.setRhsTerms({
         {-xi,{{&Hxy}}},
-        {2*xi,{{&abParticle.Qxy},{&trQH}}},       
+        {2*xi,{{&abParticle.Qxy},{&trQH}}},    
+        // {AA,{{&abParticle.Qxy}}},   
         {AA,{{&abParticle.Concentration},{&abParticle.Pxy}}},
-        // {AA,{{&abParticle.Concentrationminus},{&abParticle.Pxy}}}
+
     });
     // Elastic stress from nematics
     sigmaKxx.setRhsTerms({

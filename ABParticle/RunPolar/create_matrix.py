@@ -4,7 +4,7 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 
-savenames = ["test75",]
+savenames = ["test97",]
 
 for savename in savenames:
     datadir = "../data/"+savename+"/"
@@ -16,6 +16,10 @@ for savename in savenames:
 
 
 # create matrixC 
+def CreateZeros(lenth_x,lenth_y,L):
+    matrix1x = np.zeros((lenth_x,lenth_y))
+    matrix1y = np.zeros((lenth_x,lenth_y))
+    return matrix1x.reshape(1,-1).T,matrix1y.reshape(1,-1).T
 def CreateMatrixC(lenth_x,lenth_y,L):
     matrix1x = np.zeros((lenth_x,lenth_y))
     matrix1y = np.zeros((lenth_x,lenth_y))
@@ -100,6 +104,7 @@ lenth_y = 128
 
 L = 32
 anxx,anxy = CreateMatrixF(lenth_x,lenth_y,L)
+# anxx,anxy = CreateZeros(lenth_x,lenth_y,L)
 # anxx,anxy = CreateMatrixS1(lenth_x,lenth_y,L)
 
 # np.savetxt(savedir+'anchx_0.dat', anxx, fmt='%f')

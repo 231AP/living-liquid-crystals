@@ -159,7 +159,7 @@ V0=10
 vmax1 = 160
 
 # "N500cMean00005CoAA-3xian1",
-savenames = ["test75",]
+savenames = ["test97",]
 time_range = np.arange(1,100)
 steph = 1
 size = 128 * steph
@@ -257,6 +257,7 @@ for savename in savenames:
         print(Qxx[0:2,0:2])
         S2 = 4*Qxx**2+4*Qxy**2
         A2 = 4*anchx**2+4*anchy**2
+        v_abs = np.sqrt(vx **2 + vy **2)
         # print(np.mean(S2))
         # print(np.max(S2))
         
@@ -371,7 +372,8 @@ for savename in savenames:
         ax = fig.add_subplot(2,2,2)
         # X,Y = np.meshgrid(np.arange(size),np.arange(size))
         # im = ax.imshow(omega,vmax = 5,vmin = -5 ,origin='lower', interpolation='gaussian', animated=True, cmap='jet')
-        im = ax.imshow(omega,origin='lower',interpolation='gaussian', animated=True, cmap='jet')
+        # im = ax.imshow(omega,origin='lower',interpolation='gaussian', animated=True, cmap='jet')
+        im = ax.imshow(v_abs,origin='lower', animated=True, cmap='summer')
         ax.quiver(X[::cut_size,::cut_size],Y[::cut_size,::cut_size],vx[::cut_size,::cut_size],vy[::cut_size,::cut_size])
         # ax.set_xlabel(None)
 
@@ -418,12 +420,14 @@ for savename in savenames:
         # ax.scatter(xDP1, yDP1, c='red', marker='o',label='LC_DP1')
         ax.legend(loc = 1)
         ax = fig.add_subplot(2,2,4)
-    # print(pts.shape)
+        im = ax.imshow(omega,origin='lower', animated=True, cmap='jet')
+
         ax.quiver(pts[:,0],pts[:,1],100*pts[:,2],100*pts[:,3],0.01)
     
         ax.set_xlim(0,size)
         ax.set_ylim(0,size)
-        
+        cb = plt.colorbar(im,ax = ax)
+        cb.ax.tick_params(labelsize=cbsize)
         
         # cb = plt.colorbar(im,ax=ax,)
         # cb.ax.tick_params(labelsize=cbsize)

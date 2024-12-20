@@ -3,7 +3,7 @@
 
 # 定义每个变量的值，可以根据需要进行修改
 
-V0=10
+V0=50
 ABParticle=1
 
 
@@ -30,11 +30,11 @@ min_distance=0.1
 equilibrium_distance=1
 force_coefficient=3
 # kBT=0.5
-kBT=0
+kBT=0.01
 viscosity_coefficient=1
 neighbor_update_threshold=1
 neighbor_update_threshold1=1
-total_particles=600
+total_particles=1000
 start_time=0
 end_time=200
 
