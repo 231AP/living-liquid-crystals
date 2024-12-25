@@ -3,7 +3,7 @@
 
 # 定义每个变量的值，可以根据需要进行修改
 
-V0=50
+V0=7.5
 ABParticle=1
 
 
@@ -12,10 +12,10 @@ celllist_size_y=1
 celllist_count_x=128
 celllist_count_y=128
 
-celllist_size_x1=8
-celllist_size_y1=8
-celllist_count_x1=16
-celllist_count_y1=16
+celllist_size_x1=4
+celllist_size_y1=4
+celllist_count_x1=32
+celllist_count_y1=32
 box_x_length=$((celllist_size_x*celllist_count_x))
 box_y_length=$((celllist_size_y*celllist_count_y))
 echo $box_x_length
@@ -23,18 +23,18 @@ echo $box_x_length
 particle_density=4
 max_particles_per_cell=200
 max_particles_per_cell1=200
-neighbor_distance=6
+neighbor_distance=2
 mask0=5
 mask1=3
 min_distance=0.1
 equilibrium_distance=1
 force_coefficient=3
 # kBT=0.5
-kBT=0.01
+kBT=0.05
 viscosity_coefficient=1
 neighbor_update_threshold=1
 neighbor_update_threshold1=1
-NumParticles=1000
+NumParticles=231
 start_time=0
 end_time=200
 
@@ -106,7 +106,6 @@ $celllist_count_y1
 $max_particles_per_cell1
 # 近邻表更新临界位移
 $neighbor_update_threshold1
-
 EOF
 
 echo "input.dat 文件已生成。"

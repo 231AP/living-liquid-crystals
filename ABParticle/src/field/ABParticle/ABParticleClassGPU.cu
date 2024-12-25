@@ -23,9 +23,9 @@ __global__ void getABParticlePxPy(Particle PT, Parameter PM, int Nx,int Ny) {
         PT.cellPxy[cellId] = 0;
 
 
-        for (int num=1; num<=PT.cellOffsetsCL[cellId];num++){
-            PT.cellPx[cellId] += abs(PT.px[PT.cellList[cellId * PM.maxParticlePerCell + num]]);
-            PT.cellPy[cellId] += abs(PT.py[PT.cellList[cellId * PM.maxParticlePerCell + num]]);
+        for (int num=0; num<PT.cellOffsetsCL[cellId];num++){
+            PT.cellPx[cellId] += PT.px[PT.cellList[cellId * PM.maxParticlePerCell + num]];
+            PT.cellPy[cellId] += PT.py[PT.cellList[cellId * PM.maxParticlePerCell + num]];
 
         }
 
@@ -79,6 +79,93 @@ __global__ void findConcentration(Particle PT,Parameter PM,double* C1, int Nx, i
 
 
 
+// __global__ void updateConcentration(Particle PT,Parameter PM,double* Pxx, double* Pxy,double* C1, int Nx, int Ny, int Nbx, int Nby) {
+//     int i=blockIdx.x;
+//     int j=threadIdx.x;
+//     int idx=(blockDim.x+2*Nbx)*(i+Nby)+j+Nbx;
+   
+    
+//     if (i<Ny && j<Nx) { 
+
+//         float a0 = 0.6;
+//         float a1 = 0.2;
+//         float a2 = 0.05;
+//         float a3 = 0.05;
+//         float a4 = 0.05;
+//         float a5 = 0.05;
+//         // printf("1");
+
+//         C1[idx] = a0*PT.cellOffsetsCL[i*blockDim.x+j];
+//         Pxx[idx] = a0*PT.cellOffsetsCL[i*blockDim.x+j]*PT.cellPxx[i*blockDim.x +j];
+//         Pxy[idx] = a0*PT.cellOffsetsCL[i*blockDim.x+j]*PT.cellPxy[i*blockDim.x +j];//这里
+
+//         for (int x = -1;x <= 1;x++) {
+//         for (int y = -1;y <= 1;y++) {
+//             int kk1 =(i+x+PM.cellNumX)%PM.cellNumX;
+//             int kk2 = (j+y+PM.cellNumY)%PM.cellNumY;
+//             C1[idx] += a1*PT.cellOffsetsCL[(kk1)*blockDim.x+(kk2)];
+//             Pxx[idx] += a1*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
+//             Pxy[idx] += a1*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
+//         }
+//         }
+//         for (int x = -2;x <= 2;x++) {
+//         for (int y = -2;y <= 2;y++) {
+//             int kk1 =(i+x+PM.cellNumX)%PM.cellNumX;
+//             int kk2 = (j+y+PM.cellNumY)%PM.cellNumY;
+//             C1[idx] += a2*PT.cellOffsetsCL[(kk1)*blockDim.x+(kk2)];
+//             Pxx[idx] += a2*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
+//             Pxy[idx] += a2*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
+//         }
+//         }
+
+//         for (int x = -3;x <= 3;x++) {
+//         for (int y = -3;y <= 3;y++) {
+//             int kk1 =(i+x+PM.cellNumX)%PM.cellNumX;
+//             int kk2 = (j+y+PM.cellNumY)%PM.cellNumY;
+//             C1[idx] += a3*PT.cellOffsetsCL[(kk1)*blockDim.x+(kk2)];
+//             Pxx[idx] += a3*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
+//             Pxy[idx] += a3*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
+//         }
+//         }
+
+//         for (int x = -4;x <= 4;x++) {
+//         for (int y = -4;y <= 4;y++) {
+//             int kk1 =(i+x+PM.cellNumX)%PM.cellNumX;
+//             int kk2 = (j+y+PM.cellNumY)%PM.cellNumY;
+//             C1[idx] += a4*PT.cellOffsetsCL[(kk1)*blockDim.x+(kk2)];
+//             Pxx[idx] += a4*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
+//             Pxy[idx] += a4*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
+            
+//         }
+//         }
+
+//         for (int x = -5;x <= 5;x++) {
+//         for (int y = -5;y <= 5;y++) {
+//             int kk1 =(i+x+PM.cellNumX)%PM.cellNumX;
+//             int kk2 = (j+y+PM.cellNumY)%PM.cellNumY;
+//             C1[idx] += a5*PT.cellOffsetsCL[(kk1)*blockDim.x+(kk2)];
+//             Pxx[idx] += a5*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
+//             Pxy[idx] += a5*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
+            
+//         }
+//         }
+
+       
+//         if (C1[idx]>0){
+//             Pxx[idx]/= C1[idx];
+//             Pxy[idx]/= C1[idx];
+//         }
+//         PT.cellPx[i*blockDim.x+j] = 0;
+//         PT.cellPy[i*blockDim.x+j] = 0;
+
+
+  
+//     }
+// };
+// //=================================================================================
+
+
+
 __global__ void updateConcentration(Particle PT,Parameter PM,double* Pxx, double* Pxy,double* C1, int Nx, int Ny, int Nbx, int Nby) {
     int i=blockIdx.x;
     int j=threadIdx.x;
@@ -96,16 +183,16 @@ __global__ void updateConcentration(Particle PT,Parameter PM,double* Pxx, double
         // printf("1");
 
         C1[idx] = a0*PT.cellOffsetsCL[i*blockDim.x+j];
-        Pxx[idx] = a0*PT.cellOffsetsCL[i*blockDim.x+j]*PT.cellPxx[i*blockDim.x +j];
-        Pxy[idx] = a0*PT.cellOffsetsCL[i*blockDim.x+j]*PT.cellPxy[i*blockDim.x +j];//这里
+        Pxx[idx] = PT.cellPxx[i*blockDim.x +j];
+        Pxy[idx] = PT.cellPxy[i*blockDim.x +j];//这里
 
         for (int x = -1;x <= 1;x++) {
         for (int y = -1;y <= 1;y++) {
             int kk1 =(i+x+PM.cellNumX)%PM.cellNumX;
             int kk2 = (j+y+PM.cellNumY)%PM.cellNumY;
             C1[idx] += a1*PT.cellOffsetsCL[(kk1)*blockDim.x+(kk2)];
-            Pxx[idx] += a1*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
-            Pxy[idx] += a1*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
+            // Pxx[idx] += a1*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
+            // Pxy[idx] += a1*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
         }
         }
         for (int x = -2;x <= 2;x++) {
@@ -113,8 +200,8 @@ __global__ void updateConcentration(Particle PT,Parameter PM,double* Pxx, double
             int kk1 =(i+x+PM.cellNumX)%PM.cellNumX;
             int kk2 = (j+y+PM.cellNumY)%PM.cellNumY;
             C1[idx] += a2*PT.cellOffsetsCL[(kk1)*blockDim.x+(kk2)];
-            Pxx[idx] += a2*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
-            Pxy[idx] += a2*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
+            // Pxx[idx] += a2*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
+            // Pxy[idx] += a2*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
         }
         }
 
@@ -123,8 +210,8 @@ __global__ void updateConcentration(Particle PT,Parameter PM,double* Pxx, double
             int kk1 =(i+x+PM.cellNumX)%PM.cellNumX;
             int kk2 = (j+y+PM.cellNumY)%PM.cellNumY;
             C1[idx] += a3*PT.cellOffsetsCL[(kk1)*blockDim.x+(kk2)];
-            Pxx[idx] += a3*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
-            Pxy[idx] += a3*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
+            // Pxx[idx] += a3*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
+            // Pxy[idx] += a3*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
         }
         }
 
@@ -133,8 +220,8 @@ __global__ void updateConcentration(Particle PT,Parameter PM,double* Pxx, double
             int kk1 =(i+x+PM.cellNumX)%PM.cellNumX;
             int kk2 = (j+y+PM.cellNumY)%PM.cellNumY;
             C1[idx] += a4*PT.cellOffsetsCL[(kk1)*blockDim.x+(kk2)];
-            Pxx[idx] += a4*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
-            Pxy[idx] += a4*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
+            // Pxx[idx] += a4*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
+            // Pxy[idx] += a4*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
             
         }
         }
@@ -144,17 +231,17 @@ __global__ void updateConcentration(Particle PT,Parameter PM,double* Pxx, double
             int kk1 =(i+x+PM.cellNumX)%PM.cellNumX;
             int kk2 = (j+y+PM.cellNumY)%PM.cellNumY;
             C1[idx] += a5*PT.cellOffsetsCL[(kk1)*blockDim.x+(kk2)];
-            Pxx[idx] += a5*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
-            Pxy[idx] += a5*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
+            // Pxx[idx] += a5*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
+            // Pxy[idx] += a5*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
             
         }
         }
 
        
-        if (C1[idx]>0){
-            Pxx[idx]/= C1[idx];
-            Pxy[idx]/= C1[idx];
-        }
+        // if (C1[idx]>0){
+        //     Pxx[idx]/= C1[idx];
+        //     Pxy[idx]/= C1[idx];
+        // }
         PT.cellPx[i*blockDim.x+j] = 0;
         PT.cellPy[i*blockDim.x+j] = 0;
 
@@ -162,10 +249,10 @@ __global__ void updateConcentration(Particle PT,Parameter PM,double* Pxx, double
   
     }
 };
-//=================================================================================
 
 
 
+// =======================================================================================
 
 
 
@@ -200,12 +287,13 @@ __global__ void smoothConcentration(Parameter PM,double* C1,double* Pxx,double* 
     int idx=(blockDim.x+2*Nbx)*(i+Nby)+j+Nbx;
     int di = blockDim.x+2*Nbx;
     float dt11 = 0.01;
-    float D = 10;
+    float Dc = 10;
+    float Dp = 0;
     
     if (i<Ny && j<Nx) { 
-        C1[idx] += dt11 * D * LaplO4I(C1,di,idx);
-        Pxx[idx] += dt11 * D * LaplO4I(Pxx,di,idx);
-        Pxy[idx] += dt11 * D * LaplO4I(Pxy,di,idx);
+        C1[idx] += dt11 * Dc * LaplO4I(C1,di,idx);
+        Pxx[idx] += dt11 * Dp * LaplO4I(Pxx,di,idx);
+        Pxy[idx] += dt11 * Dp * LaplO4I(Pxy,di,idx);
     }
 };
 //=================================================================================
@@ -493,17 +581,9 @@ __global__ void getForce (Particle PT, Parameter PM, double* vx, double* vy, dou
         double theta1 = atan2(PT.py[id],PT.px[id]);
         
         // printf("%f",theta);
-        theta1 += SQ*sin(2*theta - 2*theta1)*PM.tStep;
+        theta1 += 10*SQ*sin(2*theta - 2*theta1)*PM.tStep;
         PT.px[id] = cos(theta1);
         PT.py[id] = sin(theta1);
-// printf("%f",PT.px[id]);
-
-
-
-
-
-
-
     if (PT.fx[id] > 10000 || PT.fx[id] < -10000) {
         printf("wrong!!!!!!!!!id:%d,fx:%f,fy:%f,dx:%f,dy:%f,x0:%f,x1:%f,y0:%f,y1:%f,NLFX:%d\n", id,PT.fx[id], PT.fy[id], dx,dy,x0,x1, y0, y1, PT.NeighborListFlagX[id * PM.maxParticlePerCell + idNL]);
         wrongFlag = 1;

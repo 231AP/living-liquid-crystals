@@ -159,8 +159,8 @@ V0=10
 vmax1 = 160
 
 # "N500cMean00005CoAA-3xian1",
-savenames = ["test10",]
-time_range = np.arange(1,300)
+savenames = ["test33",]
+time_range = np.arange(1,500)
 steph = 1
 size = 128 * steph
 for savename in savenames:
@@ -304,7 +304,7 @@ for savename in savenames:
         fig = plt.figure(figsize = [20,20])
 
         ax = fig.add_subplot(2,2,1)
-        im = ax.imshow(S2,vmax =0.9,vmin= 0,norm=None,origin="lower")
+        im = ax.imshow(S2,vmax =1,vmin= 0,norm=None,origin="lower")
         X,Y = np.meshgrid(np.arange(size),np.arange(size))
         xDP, xDM = detect_defect(theta)
         pDP, pDM = detect_defect(theta1)
@@ -351,14 +351,14 @@ for savename in savenames:
         
         ax.quiver(X[::cut_size,::cut_size],Y[::cut_size,::cut_size],n1cut,n2cut,color = "red" ,angles='xy', scale_units='xy', scale=1/6, headwidth=0, headlength=0 ,headaxislength=0, pivot='middle')
         # ax.quiver(X[::cut_size,::cut_size],Y[::cut_size,::cut_size],vx[::cut_size,::cut_size],vy[::cut_size,::cut_size])
-        ax.quiver(X[::cut_size,::cut_size],Y[::cut_size,::cut_size],p11cut,p22cut,color = "#66CCFF",angles='xy', scale_units='xy', scale=1/4, headwidth=0, headlength=0 ,headaxislength=0, pivot='middle')
-        ax.scatter(pxDP1, pyDP1, c='black', marker='o',label='bacteria_DP1')
-        ax.quiver(pxDP1, pyDP1, np.cos(theta_pDP[pDP > 0.5]), np.sin(theta_pDP[pDP > 0.5]), color='black')
+        # ax.quiver(X[::cut_size,::cut_size],Y[::cut_size,::cut_size],p11cut,p22cut,color = "#66CCFF",angles='xy', scale_units='xy', scale=1/4, headwidth=0, headlength=0 ,headaxislength=0, pivot='middle')
+        # ax.scatter(pxDP1, pyDP1, c='black', marker='o',label='bacteria_DP1')
+        # ax.quiver(pxDP1, pyDP1, np.cos(theta_pDP[pDP > 0.5]), np.sin(theta_pDP[pDP > 0.5]), color='black')
         
-        ax.scatter(xDP1, yDP1, c='red', marker='o',label='nematics_DP1')
-        ax.quiver(xDP1, yDP1, np.cos(theta_xDP[xDP > 0.5]), np.sin(theta_xDP[xDP > 0.5]), color='red')
-        # ax.scatter(xDP1, yDP1, c='red', marker='o',label='LC_DP1')
-        ax.legend(loc =1 )
+        # ax.scatter(xDP1, yDP1, c='red', marker='o',label='nematics_DP1')
+        # ax.quiver(xDP1, yDP1, np.cos(theta_xDP[xDP > 0.5]), np.sin(theta_xDP[xDP > 0.5]), color='red')
+        # # ax.scatter(xDP1, yDP1, c='red', marker='o',label='LC_DP1')
+        # ax.legend(loc =1 )
         # ax.scatter(pxDM1, pyDM1, c='m', marker='o', label='DM1')
         # ax.quiver(X[::cut_size,::cut_size],Y[::cut_size,::cut_size],p11cut,p22cut)
         # ax.quiver(X[::cut_size,::cut_size],Y[::cut_size,::cut_size],p111cut,p222cut,color = "green")
@@ -369,24 +369,31 @@ for savename in savenames:
         
         
         
-        ax = fig.add_subplot(2,2,2)
+        ax = fig.add_subplot(2,2,3)
         # X,Y = np.meshgrid(np.arange(size),np.arange(size))
         # im = ax.imshow(omega,vmax = 5,vmin = -5 ,origin='lower', interpolation='gaussian', animated=True, cmap='jet')
         # im = ax.imshow(omega,origin='lower',interpolation='gaussian', animated=True, cmap='jet')
-        im = ax.imshow(v_abs,origin='lower', animated=True, cmap='summer')
-        ax.quiver(X[::cut_size,::cut_size],Y[::cut_size,::cut_size],vx[::cut_size,::cut_size],vy[::cut_size,::cut_size])
+        im = ax.imshow(v_abs,vmax =1.2,vmin = 0,origin='lower', animated=True, cmap='summer')
+        cut_size = 2
+        vx1 = vx/v_abs
+        vy1 = vy/v_abs
+        v_abs[v_abs >1.2]  = 1.2
+        vx1 *= v_abs
+        vy1 *= v_abs
+        ax.quiver(X[::cut_size,::cut_size],Y[::cut_size,::cut_size],vx1[::cut_size,::cut_size],vy1[::cut_size,::cut_size])
+        cut_size = 4
         # ax.set_xlabel(None)
 
         # ax.set_ylabel(None)
         # ax.scatter(xDP1, yDP1, c='black', marker='o', label='DP1')
         # ax.scatter(xDM1, yDM1, c='m', marker='o', label='DM1')
-        ax.scatter(pxDP1, pyDP1, c='black', marker='o',label='bacteria_DP1')
-        ax.quiver(pxDP1, pyDP1, np.cos(theta_pDP[pDP > 0.5]), np.sin(theta_pDP[pDP > 0.5]), color='black')
+        # ax.scatter(pxDP1, pyDP1, c='black', marker='o',label='bacteria_DP1')
+        # ax.quiver(pxDP1, pyDP1, np.cos(theta_pDP[pDP > 0.5]), np.sin(theta_pDP[pDP > 0.5]), color='black')
         
-        ax.scatter(xDP1, yDP1, c='red', marker='o',label='nematics_DP1')
-        ax.quiver(xDP1, yDP1, np.cos(theta_xDP[xDP > 0.5]), np.sin(theta_xDP[xDP > 0.5]), color='red')
-        # ax.scatter(xDP1, yDP1, c='red', marker='o',label='LC_DP1')
-        ax.legend(loc=1)
+        # ax.scatter(xDP1, yDP1, c='red', marker='o',label='nematics_DP1')
+        # ax.quiver(xDP1, yDP1, np.cos(theta_xDP[xDP > 0.5]), np.sin(theta_xDP[xDP > 0.5]), color='red')
+        # # ax.scatter(xDP1, yDP1, c='red', marker='o',label='LC_DP1')
+        # ax.legend(loc=1)
         cb = plt.colorbar(im,ax = ax)
         cb.ax.tick_params(labelsize=cbsize)
         ax.set_title("Velocity",size= titlesize)
@@ -404,23 +411,26 @@ for savename in savenames:
 
 
 
-        ax = fig.add_subplot(2,2,3)
-        im = ax.imshow(C,norm = None,origin='lower')
-        # im = ax.imshow(cp+cm,vmax =0.6,vmin = 0,norm = None,origin='lower')
-        # ax.scatter(xDP1, yDP1, c='black', marker='o', label='DP1')
-        # ax.scatter(xDM1, yDM1, c='m', marker='o', label='DM1')
-        # ax.streamplot(X,Y,vx,vy)
-        cb = plt.colorbar(im,ax=ax)
+        # ax = fig.add_subplot(2,2,3)
+        # im = ax.imshow(C,norm = None,origin='lower')
+        # # im = ax.imshow(cp+cm,vmax =0.6,vmin = 0,norm = None,origin='lower')
+        # # ax.scatter(xDP1, yDP1, c='black', marker='o', label='DP1')
+        # # ax.scatter(xDM1, yDM1, c='m', marker='o', label='DM1')
+        # # ax.streamplot(X,Y,vx,vy)
+        # cb = plt.colorbar(im,ax=ax)
+        # cut_size1 = 4
+        # p11cut = p11[::cut_size1,::cut_size1]
+        # p22cut = p22[::cut_size1,::cut_size1]
+        # ax.scatter(pxDP1, pyDP1, c='black', marker='o',label='bacteria_DP1')
+        # ax.quiver(X[::cut_size1,::cut_size1],Y[::cut_size1,::cut_size1],2*P2[::cut_size1,::cut_size1] * p11cut,2*P2[::cut_size1,::cut_size1] * p22cut,color = "#66CCFF",angles='xy', scale_units='xy', scale=1/4, headwidth=0, headlength=0 ,headaxislength=0, pivot='middle')
+        # ax.quiver(pxDP1, pyDP1, np.cos(theta_pDP[pDP > 0.5]), np.sin(theta_pDP[pDP > 0.5]), color='black')
         
-        ax.scatter(pxDP1, pyDP1, c='black', marker='o',label='bacteria_DP1')
-        ax.quiver(pxDP1, pyDP1, np.cos(theta_pDP[pDP > 0.5]), np.sin(theta_pDP[pDP > 0.5]), color='black')
-        
-        ax.scatter(xDP1, yDP1, c='red', marker='o',label='nematics_DP1')
-        ax.quiver(xDP1, yDP1, np.cos(theta_xDP[xDP > 0.5]), np.sin(theta_xDP[xDP > 0.5]), color='red')
-        # ax.scatter(xDP1, yDP1, c='red', marker='o',label='LC_DP1')
-        ax.legend(loc = 1)
-        ax = fig.add_subplot(2,2,4)
-        im = ax.imshow(omega,origin='lower', animated=True, cmap='jet')
+        # ax.scatter(xDP1, yDP1, c='red', marker='o',label='nematics_DP1')
+        # ax.quiver(xDP1, yDP1, np.cos(theta_xDP[xDP > 0.5]), np.sin(theta_xDP[xDP > 0.5]), color='red')
+        # # ax.scatter(xDP1, yDP1, c='red', marker='o',label='LC_DP1')
+        # ax.legend(loc = 1)
+        ax = fig.add_subplot(2,2,2)
+        im = ax.imshow(omega,vmax = 1, vmin = -1,origin='lower', animated=True, cmap='jet')
 
         ax.quiver(pts[:,0],pts[:,1],100*pts[:,2],100*pts[:,3],0.01)
     
@@ -428,6 +438,8 @@ for savename in savenames:
         ax.set_ylim(0,size)
         cb = plt.colorbar(im,ax = ax)
         cb.ax.tick_params(labelsize=cbsize)
+        
+        
         
         # cb = plt.colorbar(im,ax=ax,)
         # cb.ax.tick_params(labelsize=cbsize)
@@ -454,10 +466,10 @@ for savename in savenames:
         # ax.axis("off")
 
 
-        # ax = fig.add_subplot(2,3,5)
+        ax = fig.add_subplot(2,2,4)
         
-        # im = ax.imshow(A2,vmax =0.9,vmin= 0,norm=None,origin="lower")
-        # ax.quiver(X[::cut_size,::cut_size],Y[::cut_size,::cut_size],a1cut,a2cut,color = "red" ,angles='xy', scale_units='xy', scale=1/6, headwidth=0, headlength=0 ,headaxislength=0, pivot='middle')
+        im = ax.imshow(A2,vmax =0.9,vmin= 0,norm=None,origin="lower")
+        ax.quiver(X[::cut_size,::cut_size],Y[::cut_size,::cut_size],a1cut,a2cut,color = "red" ,angles='xy', scale_units='xy', scale=1/6, headwidth=0, headlength=0 ,headaxislength=0, pivot='middle')
         
         # c_mean = np.mean(c)
         # c_max = np.max(c)

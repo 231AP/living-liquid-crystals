@@ -1,0 +1,2457 @@
+128
+boxX128_boxY_particles_endTime200_kBT0.01
+input.dat 文件已生成。
+../src/evolver/../system/../field/ABParticle/ABParticleClassGPU.cu(380): warning #177-D: variable "offsetPAI" was declared but never referenced
+      int offsetPAI = 0;
+          ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+../src/evolver/../system/../field/ABParticle/ABParticleClassGPU.cu(383): warning #177-D: variable "cellAroundId" was declared but never referenced
+      int cellAroundId;
+          ^
+
+../src/evolver/../system/../field/ABParticle/ABParticleClassGPU.cu(429): warning #177-D: variable "offsetPAI1" was declared but never referenced
+  int offsetPAI1 = 0;
+      ^
+
+../src/evolver/../system/../field/ABParticle/ABParticleClassGPU.cu(432): warning #177-D: variable "cellAroundId1" was declared but never referenced
+      int cellAroundId1;
+          ^
+
+System's info:
+This is a 2 dimensional system.
+The box size is 128*128.
+There are 128*128 grid points, and 3*3 layers of boundary grids.
+There are 35 fields: anchx, anchy, S2, Hxx, Hxy, trQH, actx, acty, actF, sigmaSxx, sigmaSxy, sigmaA, sigmaKxx, sigmaKxy, sigmaKyy, incompFlow.omega, incompFlow.phi, incompFlow.vx, incompFlow.vy, dxvx, dxvy, dyvx, Axx, Axy, Omega, trQW, P2, abParticle.vx, abParticle.vy, abParticle.Qxx, abParticle.Qxy, abParticle.Concentration, abParticle.Pxx, abParticle.Pxy, abParticle.C1.
+Box X: 128
+Box Y: 128
+Cell size X: 1
+Cell size Y: 1
+Cell num X: 128
+Cell num Y: 128
+Density: 4
+Max particle per cell: 200
+Deadline distance: 6
+Mask 0: 5
+Mask 1: 3
+Mini instance between particle: 0.1
+Equilibrium position: 1
+Epsilon: 3
+kBT: 0.01
+Gamma value: 1
+Update list distance threshold: 1
+Particle num: 231
+Start time: 0
+Stop time: 200
+Time step: 0.0001
+TExpo: 0.001
+V0: 7
+1ABParticle: 1
+2ABParticle: 1
+Cell size X1: 8
+Cell size Y1: 8
+Cell num X1: 16
+Cell num Y1: 16
+Density: 4
+Max particle per cell1: 200
+blockNum:1,threadNum:256
+Start running simulation ...
+Progress: [>                                                 ] 0 %.  737s remains.Progress: [>                                                 ] 0 %.  640s remains.Progress: [>                                                 ] 1 %.  607s remains.Progress: [>                                                 ] 1 %.  592s remains.Progress: [>                                                 ] 1 %.  582s remains.Progress: [=>                                                ] 2 %.  574s remains.Progress: [=>                                                ] 2 %.  569s remains.Progress: [=>                                                ] 2 %.  564s remains.Progress: [=>                                                ] 3 %.  560s remains.Progress: [=>                                                ] 3 %.  556s remains.Progress: [=>                                                ] 3 %.  554s remains.Progress: [==>                                               ] 4 %.  553s remains.Progress: [==>                                               ] 4 %.  551s remains.Progress: [==>                                               ] 4 %.  548s remains.Progress: [==>                                               ] 5 %.  545s remains.Progress: [==>                                               ] 5 %.  543s remains.Progress: [==>                                               ] 5 %.  540s remains.Progress: [===>                                              ] 6 %.  538s remains.Progress: [===>                                              ] 6 %.  535s remains.Progress: [===>                                              ] 6 %.  533s remains.Progress: [===>                                              ] 7 %.  532s remains.Progress: [===>                                              ] 7 %.  529s remains.Progress: [===>                                              ] 7 %.  527s remains.Progress: [====>                                             ] 8 %.  526s remains.Progress: [====>                                             ] 8 %.  524s remains.Progress: [====>                                             ] 8 %.  521s remains.Progress: [====>                                             ] 9 %.  519s remains.Progress: [====>                                             ] 9 %.  517s remains.Progress: [====>                                             ] 9 %.  514s remains.Progress: [=====>                                            ] 10 %.  512s remains.Progress: [=====>                                            ] 10 %.  510s remains.Progress: [=====>                                            ] 10 %.  508s remains.Progress: [=====>                                            ] 11 %.  506s remains.Progress: [=====>                                            ] 11 %.  504s remains.Progress: [=====>                                            ] 11 %.  502s remains.Progress: [======>                                           ] 12 %.  499s remains.Progress: [======>                                           ] 12 %.  497s remains.Progress: [======>                                           ] 12 %.  495s remains.Progress: [======>                                           ] 13 %.  493s remains.Progress: [======>                                           ] 13 %.  491s remains.Progress: [======>                                           ] 13 %.  489s remains.Progress: [=======>                                          ] 14 %.  487s remains.Progress: [=======>                                          ] 14 %.  485s remains.Progress: [=======>                                          ] 14 %.  483s remains.Progress: [=======>                                          ] 15 %.  481s remains.Progress: [=======>                                          ] 15 %.  478s remains.Progress: [=======>                                          ] 15 %.  476s remains.Progress: [========>                                         ] 16 %.  474s remains.Progress: [========>                                         ] 16 %.  472s remains.Progress: [========>                                         ] 16 %.  470s remains.Progress: [========>                                         ] 17 %.  468s remains.Progress: [========>                                         ] 17 %.  466s remains.Progress: [========>                                         ] 17 %.  464s remains.Progress: [=========>                                        ] 18 %.  462s remains.Progress: [=========>                                        ] 18 %.  460s remains.Progress: [=========>                                        ] 18 %.  458s remains.Progress: [=========>                                        ] 19 %.  456s remains.Progress: [=========>                                        ] 19 %.  454s remains.Progress: [=========>                                        ] 19 %.  452s remains.Progress: [==========>                                       ] 20 %.  450s remains.Progress: [==========>                                       ] 20 %.  449s remains.Progress: [==========>                                       ] 20 %.  447s remains.Progress: [==========>                                       ] 21 %.  445s remains.Progress: [==========>                                       ] 21 %.  443s remains.Progress: [==========>                                       ] 21 %.  441s remains.Progress: [===========>                                      ] 22 %.  439s remains.Progress: [===========>                                      ] 22 %.  437s remains.Progress: [===========>                                      ] 22 %.  435s remains.Progress: [===========>                                      ] 23 %.  433s remains.Progress: [===========>                                      ] 23 %.  431s remains.Progress: [===========>                                      ] 23 %.  429s remains.Progress: [============>                                     ] 24 %.  427s remains.Progress: [============>                                     ] 24 %.  425s remains.Progress: [============>                                     ] 24 %.  423s remains.Progress: [============>                                     ] 25 %.  421s remains.Progress: [============>                                     ] 25 %.  419s remains.Progress: [============>                                     ] 25 %.  417s remains.Progress: [=============>                                    ] 26 %.  415s remains.Progress: [=============>                                    ] 26 %.  414s remains.Progress: [=============>                                    ] 26 %.  412s remains.Progress: [=============>                                    ] 27 %.  410s remains.Progress: [=============>                                    ] 27 %.  408s remains.Progress: [=============>                                    ] 27 %.  406s remains.Progress: [==============>                                   ] 28 %.  404s remains.Progress: [==============>                                   ] 28 %.  402s remains.Progress: [==============>                                   ] 28 %.  400s remains.Progress: [==============>                                   ] 29 %.  398s remains.Progress: [==============>                                   ] 29 %.  396s remains.Progress: [==============>                                   ] 29 %.  394s remains.Progress: [===============>                                  ] 30 %.  393s remains.Progress: [===============>                                  ] 30 %.  391s remains.Progress: [===============>                                  ] 30 %.  389s remains.Progress: [===============>                                  ] 31 %.  387s remains.Progress: [===============>                                  ] 31 %.  385s remains.Progress: [===============>                                  ] 31 %.  383s remains.Progress: [================>                                 ] 32 %.  381s remains.Progress: [================>                                 ] 32 %.  379s remains.Progress: [================>                                 ] 32 %.  377s remains.Progress: [================>                                 ] 33 %.  375s remains.Progress: [================>                                 ] 33 %.  374s remains.Progress: [================>                                 ] 33 %.  372s remains.Progress: [=================>                                ] 34 %.  370s remains.Progress: [=================>                                ] 34 %.  368s remains.Progress: [=================>                                ] 34 %.  366s remains.Progress: [=================>                                ] 35 %.  364s remains.Progress: [=================>                                ] 35 %.  362s remains.Progress: [=================>                                ] 35 %.  360s remains.Progress: [==================>                               ] 36 %.  358s remains.Progress: [==================>                               ] 36 %.  357s remains.Progress: [==================>                               ] 36 %.  355s remains.Progress: [==================>                               ] 37 %.  353s remains.Progress: [==================>                               ] 37 %.  351s remains.Progress: [==================>                               ] 37 %.  349s remains.Progress: [===================>                              ] 38 %.  347s remains.Progress: [===================>                              ] 38 %.  345s remains.Progress: [===================>                              ] 38 %.  343s remains.Progress: [===================>                              ] 39 %.  342s remains.Progress: [===================>                              ] 39 %.  340s remains.Progress: [===================>                              ] 39 %.  338s remains.Progress: [====================>                             ] 40 %.  336s remains.Progress: [====================>                             ] 40 %.  334s remains.Progress: [====================>                             ] 40 %.  332s remains.Progress: [====================>                             ] 41 %.  330s remains.Progress: [====================>                             ] 41 %.  328s remains.Progress: [====================>                             ] 41 %.  326s remains.Progress: [=====================>                            ] 42 %.  325s remains.Progress: [=====================>                            ] 42 %.  323s remains.Progress: [=====================>                            ] 42 %.  321s remains.Progress: [=====================>                            ] 43 %.  319s remains.Progress: [=====================>                            ] 43 %.  317s remains.Progress: [=====================>                            ] 43 %.  315s remains.Progress: [======================>                           ] 44 %.  313s remains.Progress: [======================>                           ] 44 %.  311s remains.Progress: [======================>                           ] 44 %.  310s remains.Progress: [======================>                           ] 45 %.  308s remains.Progress: [======================>                           ] 45 %.  306s remains.Progress: [======================>                           ] 45 %.  304s remains.Progress: [=======================>                          ] 46 %.  302s remains.Progress: [=======================>                          ] 46 %.  300s remains.Progress: [=======================>                          ] 46 %.  298s remains.Progress: [=======================>                          ] 47 %.  296s remains.Progress: [=======================>                          ] 47 %.  295s remains.Progress: [=======================>                          ] 47 %.  293s remains.Progress: [========================>                         ] 48 %.  291s remains.Progress: [========================>                         ] 48 %.  289s remains.Progress: [========================>                         ] 48 %.  287s remains.Progress: [========================>                         ] 49 %.  285s remains.Progress: [========================>                         ] 49 %.  283s remains.Progress: [========================>                         ] 49 %.  282s remains.Progress: [=========================>                        ] 50 %.  280s remains.Progress: [=========================>                        ] 50 %.  278s remains.Progress: [=========================>                        ] 50 %.  276s remains.Progress: [=========================>                        ] 51 %.  274s remains.Progress: [=========================>                        ] 51 %.  272s remains.Progress: [=========================>                        ] 51 %.  270s remains.Progress: [==========================>                       ] 52 %.  268s remains.Progress: [==========================>                       ] 52 %.  267s remains.Progress: [==========================>                       ] 52 %.  265s remains.Progress: [==========================>                       ] 53 %.  263s remains.Progress: [==========================>                       ] 53 %.  261s remains.Progress: [==========================>                       ] 53 %.  259s remains.Progress: [===========================>                      ] 54 %.  257s remains.Progress: [===========================>                      ] 54 %.  255s remains.Progress: [===========================>                      ] 54 %.  253s remains.Progress: [===========================>                      ] 55 %.  252s remains.Progress: [===========================>                      ] 55 %.  250s remains.Progress: [===========================>                      ] 55 %.  248s remains.Progress: [============================>                     ] 56 %.  246s remains.Progress: [============================>                     ] 56 %.  244s remains.Progress: [============================>                     ] 56 %.  242s remains.Progress: [============================>                     ] 57 %.  240s remains.Progress: [============================>                     ] 57 %.  239s remains.Progress: [============================>                     ] 57 %.  237s remains.Progress: [=============================>                    ] 58 %.  235s remains.Progress: [=============================>                    ] 58 %.  233s remains.Progress: [=============================>                    ] 58 %.  231s remains.Progress: [=============================>                    ] 59 %.  229s remains.Progress: [=============================>                    ] 59 %.  227s remains.Progress: [=============================>                    ] 59 %.  225s remains.Progress: [==============================>                   ] 60 %.  224s remains.Progress: [==============================>                   ] 60 %.  222s remains.Progress: [==============================>                   ] 60 %.  220s remains.Progress: [==============================>                   ] 61 %.  218s remains.Progress: [==============================>                   ] 61 %.  216s remains.Progress: [==============================>                   ] 61 %.  214s remains.Progress: [===============================>                  ] 62 %.  212s remains.Progress: [===============================>                  ] 62 %.  210s remains.Progress: [===============================>                  ] 62 %.  209s remains.Progress: [===============================>                  ] 63 %.  207s remains.Progress: [===============================>                  ] 63 %.  205s remains.Progress: [===============================>                  ] 63 %.  203s remains.Progress: [================================>                 ] 64 %.  201s remains.Progress: [================================>                 ] 64 %.  199s remains.Progress: [================================>                 ] 64 %.  197s remains.Progress: [================================>                 ] 65 %.  196s remains.Progress: [================================>                 ] 65 %.  194s remains.Progress: [================================>                 ] 65 %.  192s remains.Progress: [=================================>                ] 66 %.  190s remains.Progress: [=================================>                ] 66 %.  188s remains.Progress: [=================================>                ] 66 %.  186s remains.Progress: [=================================>                ] 67 %.  184s remains.Progress: [=================================>                ] 67 %.  182s remains.Progress: [=================================>                ] 67 %.  181s remains.Progress: [==================================>               ] 68 %.  179s remains.Progress: [==================================>               ] 68 %.  177s remains.Progress: [==================================>               ] 68 %.  175s remains.Progress: [==================================>               ] 69 %.  173s remains.Progress: [==================================>               ] 69 %.  171s remains.Progress: [==================================>               ] 69 %.  169s remains.Progress: [===================================>              ] 70 %.  167s remains.Progress: [===================================>              ] 70 %.  166s remains.Progress: [===================================>              ] 70 %.  164s remains.Progress: [===================================>              ] 71 %.  162s remains.Progress: [===================================>              ] 71 %.  160s remains.Progress: [===================================>              ] 71 %.  158s remains.Progress: [====================================>             ] 72 %.  156s remains.Progress: [====================================>             ] 72 %.  154s remains.Progress: [====================================>             ] 72 %.  153s remains.Progress: [====================================>             ] 73 %.  151s remains.Progress: [====================================>             ] 73 %.  149s remains.Progress: [====================================>             ] 73 %.  147s remains.Progress: [=====================================>            ] 74 %.  145s remains.Progress: [=====================================>            ] 74 %.  143s remains.Progress: [=====================================>            ] 74 %.  141s remains.Progress: [=====================================>            ] 75 %.  139s remains.Progress: [=====================================>            ] 75 %.  138s remains.Progress: [=====================================>            ] 75 %.  136s remains.Progress: [======================================>           ] 76 %.  134s remains.Progress: [======================================>           ] 76 %.  132s remains.Progress: [======================================>           ] 76 %.  130s remains.Progress: [======================================>           ] 77 %.  128s remains.Progress: [======================================>           ] 77 %.  126s remains.Progress: [======================================>           ] 77 %.  125s remains.Progress: [=======================================>          ] 78 %.  123s remains.Progress: [=======================================>          ] 78 %.  121s remains.Progress: [=======================================>          ] 78 %.  119s remains.Progress: [=======================================>          ] 79 %.  117s remains.Progress: [=======================================>          ] 79 %.  115s remains.Progress: [=======================================>          ] 79 %.  113s remains.Progress: [========================================>         ] 80 %.  111s remains.Progress: [========================================>         ] 80 %.  110s remains.Progress: [========================================>         ] 80 %.  108s remains.Progress: [========================================>         ] 81 %.  106s remains.Progress: [========================================>         ] 81 %.  104s remains.Progress: [========================================>         ] 81 %.  102s remains.Progress: [=========================================>        ] 82 %.  100s remains.Progress: [=========================================>        ] 82 %.  98s remains.Progress: [=========================================>        ] 82 %.  96s remains.Progress: [=========================================>        ] 83 %.  95s remains.Progress: [=========================================>        ] 83 %.  93s remains.Progress: [=========================================>        ] 83 %.  91s remains.Progress: [==========================================>       ] 84 %.  89s remains.Progress: [==========================================>       ] 84 %.  87s remains.Progress: [==========================================>       ] 84 %.  85s remains.Progress: [==========================================>       ] 85 %.  83s remains.Progress: [==========================================>       ] 85 %.  82s remains.Progress: [==========================================>       ] 85 %.  80s remains.Progress: [===========================================>      ] 86 %.  78s remains.Progress: [===========================================>      ] 86 %.  76s remains.Progress: [===========================================>      ] 86 %.  74s remains.Progress: [===========================================>      ] 87 %.  72s remains.Progress: [===========================================>      ] 87 %.  70s remains.Progress: [===========================================>      ] 87 %.  68s remains.Progress: [============================================>     ] 88 %.  67s remains.Progress: [============================================>     ] 88 %.  65s remains.Progress: [============================================>     ] 88 %.  63s remains.Progress: [============================================>     ] 89 %.  61s remains.Progress: [============================================>     ] 89 %.  59s remains.Progress: [============================================>     ] 89 %.  57s remains.Progress: [=============================================>    ] 90 %.  55s remains.Progress: [=============================================>    ] 90 %.  54s remains.Progress: [=============================================>    ] 90 %.  52s remains.Progress: [=============================================>    ] 91 %.  50s remains.Progress: [=============================================>    ] 91 %.  48s remains.Progress: [=============================================>    ] 91 %.  46s remains.Progress: [==============================================>   ] 92 %.  44s remains.Progress: [==============================================>   ] 92 %.  42s remains.Progress: [==============================================>   ] 92 %.  41s remains.Progress: [==============================================>   ] 93 %.  39s remains.Progress: [==============================================>   ] 93 %.  37s remains.Progress: [==============================================>   ] 93 %.  35s remains.Progress: [===============================================>  ] 94 %.  33s remains.Progress: [===============================================>  ] 94 %.  31s remains.Progress: [===============================================>  ] 94 %.  29s remains.Progress: [===============================================>  ] 95 %.  27s remains.Progress: [===============================================>  ] 95 %.  26s remains.Progress: [===============================================>  ] 95 %.  24s remains.Progress: [================================================> ] 96 %.  22s remains.Progress: [================================================> ] 96 %.  20s remains.Progress: [================================================> ] 96 %.  18s remains.Progress: [================================================> ] 97 %.  16s remains.Progress: [================================================> ] 97 %.  14s remains.Progress: [================================================> ] 97 %.  13s remains.Progress: [=================================================>] 98 %.  11s remains.Progress: [=================================================>] 98 %.  9s remains.Progress: [=================================================>] 98 %.  7s remains.Progress: [=================================================>] 99 %.  5s remains.Progress: [=================================================>] 99 %.  3s remains.Progress: [=================================================>] 99 %.  1s remains.Simulation finished. Total spent:558 seconds.                                                        
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lyuan/.local/lib/python3.10/site-packages/matplotlib/quiver.py:632: RuntimeWarning: Mean of empty slice.
+  amean = a.mean()
+/home/lyuan/.local/lib/python3.10/site-packages/numpy/core/_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[[-0.34534711 -0.34577583]
+ [-0.34410284 -0.34456575]]
+1.126777065864729
+-1.1209701439794832
+[[-0.34491578 -0.34490783]
+ [-0.34218521 -0.34199501]]
+1.1532683244481936
+-1.1350039983306213
+[[-0.35259533 -0.35251984]
+ [-0.34880789 -0.34860669]]
+1.154395659244957
+-1.1395028072604938
+[[-0.35897888 -0.35961511]
+ [-0.35457277 -0.35515421]]
+1.1491015216577902
+-1.141042560743013
+[[-0.36421335 -0.36442805]
+ [-0.3599872  -0.3602527 ]]
+1.1476600859388468
+-1.141057983034532
+[[-0.36097046 -0.3608164 ]
+ [-0.35696831 -0.35671548]]
+1.146251962546382
+-1.1409397271391808
+[[-0.36127553 -0.36140721]
+ [-0.35655511 -0.35671133]]
+1.1466911431599391
+-1.1407510341797058
+[[-0.36185375 -0.36206315]
+ [-0.35678063 -0.35701384]]
+1.1412899459763857
+-1.1389197735964687
+[[-0.35979318 -0.35998768]
+ [-0.35517752 -0.35534216]]
+1.138692029231236
+-1.1389997831740035
+[[-0.3592157  -0.35942156]
+ [-0.35416728 -0.35433675]]
+1.138387038576524
+-1.1379151307853683
+[[-0.3587947  -0.35882856]
+ [-0.35410897 -0.35406781]]
+1.1362799851231067
+-1.13709649158334
+[[-0.35857106 -0.35865917]
+ [-0.35376388 -0.35386184]]
+1.1379479271600585
+-1.1357977322037396
+[[-0.35889314 -0.35884689]
+ [-0.3538309  -0.35377755]]
+1.1363905627062896
+-1.1357620187101767
+[[-0.35776519 -0.35790607]
+ [-0.35254105 -0.35262626]]
+1.1349365434193133
+-1.134616901997069
+[[-0.35565564 -0.35578414]
+ [-0.35034179 -0.3503798 ]]
+1.1352020647752097
+-1.13547626436615
+[[-0.35579123 -0.35595579]
+ [-0.35023481 -0.35045004]]
+1.1350063775712913
+-1.135238964311052
+[[-0.35865909 -0.3588361 ]
+ [-0.35330443 -0.35358417]]
+1.1349476674249317
+-1.1342381527270016
+[[-0.35932573 -0.35938044]
+ [-0.35419067 -0.35424497]]
+1.13439950363767
+-1.1348676541617704
+[[-0.357855   -0.35791935]
+ [-0.35277277 -0.35280617]]
+1.1339754596164349
+-1.133789194315905
+[[-0.35683341 -0.35682104]
+ [-0.35166566 -0.35162805]]
+1.1350744126346286
+-1.1336143532174134
+[[-0.35656242 -0.35674228]
+ [-0.35138165 -0.35155157]]
+1.1352413139349342
+-1.1345049748815592
+[[-0.35645348 -0.35658342]
+ [-0.35150886 -0.35161723]]
+1.1339231942193293
+-1.1334776092353067
+[[-0.35637705 -0.35637615]
+ [-0.35155251 -0.35152118]]
+1.1331503701147503
+-1.1337791796119479
+[[-0.35643101 -0.35639836]
+ [-0.35144613 -0.35141448]]
+1.134084251681216
+-1.1339912648176904
+[[-0.35678122 -0.35687105]
+ [-0.35171285 -0.35179302]]
+1.1334756278003113
+-1.1330946182312998
+[[-0.35662776 -0.35670185]
+ [-0.35179    -0.35182407]]
+1.132583176942937
+-1.133167928347565
+[[-0.35603802 -0.35601307]
+ [-0.35124066 -0.35116032]]
+1.1334066373617806
+-1.1336445704188534
+[[-0.3556746  -0.35570695]
+ [-0.3508074  -0.35080752]]
+1.132372419949152
+-1.133287481187386
+[[-0.3558753  -0.35580435]
+ [-0.35102328 -0.35094012]]
+1.133592517421302
+-1.133214595171539
+[[-0.35621022 -0.35608842]
+ [-0.35115455 -0.35101001]]
+1.1330608282812353
+-1.1332755509960757
+[[-0.35550766 -0.35553241]
+ [-0.3502471  -0.35020809]]
+1.1327664352654332
+-1.1325498465903108
+[[-0.35431326 -0.35441107]
+ [-0.34899563 -0.3490469 ]]
+1.1329348311551266
+-1.1328854798222312
+[[-0.35559608 -0.35567899]
+ [-0.35026803 -0.35040707]]
+1.1329736777957549
+-1.1332258871661716
+[[-0.35740777 -0.35741425]
+ [-0.35227494 -0.35229111]]
+1.1328643979381026
+-1.132469365599801
+[[-0.35723834 -0.35721888]
+ [-0.35206216 -0.351986  ]]
+1.1335558663891336
+-1.1329757288474411
+[[-0.35629051 -0.35634369]
+ [-0.35112234 -0.35111687]]
+1.133527811421021
+-1.1332260492783277
+[[-0.35618889 -0.35619719]
+ [-0.35116145 -0.35114651]]
+1.1335537964091844
+-1.1326495785448571
+[[-0.35621994 -0.3562695 ]
+ [-0.35125125 -0.35127295]]
+1.1332513546828284
+-1.1329297075404987
+[[-0.35575647 -0.35577024]
+ [-0.35084407 -0.35081229]]
+1.1329036360351372
+-1.133181585207022
+[[-0.35566641 -0.35569747]
+ [-0.35073813 -0.35073087]]
+1.1325051561569395
+-1.1342526811380178
+[[-0.35617469 -0.35621977]
+ [-0.35123329 -0.3512899 ]]
+1.1330824425445438
+-1.1339623990478456
+[[-0.35669147 -0.35676568]
+ [-0.35177059 -0.35183462]]
+1.132918666417682
+-1.1331329208844854
+[[-0.35623753 -0.35628049]
+ [-0.35137694 -0.35137893]]
+1.1330333943871742
+-1.1333785048956417
+[[-0.35581602 -0.35585403]
+ [-0.35090082 -0.35092323]]
+1.1327464573610826
+-1.1334101178404938
+[[-0.35557131 -0.35556674]
+ [-0.35065327 -0.35061751]]
+1.133485944511758
+-1.1330099986872906
+[[-0.3558867  -0.35576651]
+ [-0.35089873 -0.35078418]]
+1.1330563209434683
+-1.1332115880560898
+[[-0.35600422 -0.35589271]
+ [-0.35078878 -0.35063836]]
+1.1326809849657733
+-1.1329803570630421
+[[-0.35501734 -0.35511814]
+ [-0.34971378 -0.34975877]]
+1.1326531589321447
+-1.132842097321138
+[[-0.35539395 -0.35548804]
+ [-0.35024096 -0.35036454]]
+1.132600027779461
+-1.1327638848140316
+[[-0.3567534  -0.35671492]
+ [-0.35167841 -0.3516575 ]]
+1.1324738312084135
+-1.1323741915137584
+[[-0.35688429 -0.35689479]
+ [-0.35173279 -0.3517297 ]]
+1.132736959340677
+-1.133044852566393
+[[-0.35625939 -0.35634981]
+ [-0.35121427 -0.35127063]]
+1.1333177402075205
+-1.1331326248999334
+[[-0.35561828 -0.35561968]
+ [-0.35066091 -0.35063794]]
+1.1332118569512886
+-1.1331848072584678
+[[-0.35562078 -0.3556028 ]
+ [-0.35064488 -0.35060194]]
+1.1327517854716131
+-1.1325731113775064
+[[-0.35548487 -0.35555007]
+ [-0.35053232 -0.35056728]]
+1.132447992630084
+-1.1326842232691674
+[[-0.35573852 -0.35582674]
+ [-0.35091792 -0.35099948]]
+1.1322209006981925
+-1.1339725799679936
+[[-0.35605208 -0.3560634 ]
+ [-0.35129553 -0.35131083]]
+1.1330043895853743
+-1.1344092521607994
+[[-0.35648289 -0.35646579]
+ [-0.35159788 -0.35160242]]
+1.132946630021201
+-1.1334591237879386
+[[-0.35639167 -0.35641882]
+ [-0.35153935 -0.35154386]]
+1.1327636240820604
+-1.1334930806834267
+[[-0.35570648 -0.35572691]
+ [-0.35085346 -0.35085664]]
+1.1330050003320686
+-1.1333705894865322
+[[-0.35522671 -0.35526136]
+ [-0.35034471 -0.35035992]]
+1.1337629631885673
+-1.1326354883369134
+[[-0.35512472 -0.35504457]
+ [-0.35027957 -0.35017483]]
+1.1334289168769542
+-1.1334239207880445
+[[-0.35531093 -0.35521097]
+ [-0.35005766 -0.34994851]]
+1.1331207757952027
+-1.1333814489793466
+[[-0.3556611  -0.35590213]
+ [-0.35032935 -0.35058099]]
+1.1326792070592637
+-1.1332996537130267
+[[-0.35584404 -0.35598294]
+ [-0.35083672 -0.35097399]]
+1.1330474885770618
+-1.1336120992022258
+[[-0.35663797 -0.3566565 ]
+ [-0.35166598 -0.35172843]]
+1.132719225271067
+-1.1328190646118599
+[[-0.35690162 -0.35695701]
+ [-0.35190016 -0.35198198]]
+1.1326641793745564
+-1.1326439286125876
+[[-0.35609728 -0.35623337]
+ [-0.35102916 -0.35115236]]
+1.1329641388082712
+-1.1329494637476096
+[[-0.35534336 -0.35552336]
+ [-0.35045015 -0.3506303 ]]
+1.1331977095453496
+-1.132760563928445
+[[-0.35531788 -0.35540508]
+ [-0.35039858 -0.35049315]]
+1.133322859158198
+-1.1328238469709158
+[[-0.35550239 -0.35564298]
+ [-0.35059289 -0.35073266]]
+1.132712551258058
+-1.132819681839503
+[[-0.35561844 -0.35571416]
+ [-0.35083962 -0.35092954]]
+1.1326200389307557
+-1.1335893707794413
+[[-0.3555788  -0.35561048]
+ [-0.35075839 -0.35078006]]
+1.1331005936723213
+-1.1338968511629364
+[[-0.35617178 -0.35617451]
+ [-0.35134125 -0.35136566]]
+1.132727057326345
+-1.1332692666604594
+[[-0.35616864 -0.35622018]
+ [-0.35125425 -0.35129718]]
+1.1325912614444533
+-1.1334781828250535
+[[-0.35551825 -0.35561292]
+ [-0.35055612 -0.35063152]]
+1.133047339969806
+-1.1326887015290301
+[[-0.3548491  -0.35493183]
+ [-0.34987826 -0.34995055]]
+1.1338890988976342
+-1.1323412485364148
+[[-0.35462281 -0.35462136]
+ [-0.34952558 -0.34951997]]
+1.1335918099040783
+-1.1329300464285352
+[[-0.35553015 -0.35559136]
+ [-0.35027312 -0.35037648]]
+1.132638670009039
+-1.1332296121692784
+[[-0.35641344 -0.35654219]
+ [-0.35127199 -0.35142833]]
+1.1329071114385627
+-1.1333586525133352
+[[-0.35630465 -0.3564327 ]
+ [-0.35138084 -0.35153477]]
+1.1326588386890395
+-1.1334177503875247
+[[-0.35670741 -0.35668288]
+ [-0.35191657 -0.35193687]]
+1.1324206708062774
+-1.1328575107009746
+[[-0.35678404 -0.35678748]
+ [-0.3517926  -0.35184213]]
+1.1329671484714652
+-1.132793015228522
+[[-0.35626736 -0.35640621]
+ [-0.3512317  -0.35139918]]
+1.1330900534304291
+-1.1332076955385
+[[-0.35566127 -0.35577281]
+ [-0.3507324  -0.35085048]]
+1.1331535362340133
+-1.1336678632720445
+[[-0.35542607 -0.35549228]
+ [-0.3504699  -0.35055395]]
+1.1335492227923951
+-1.1334615366266845
+[[-0.35558923 -0.35567805]
+ [-0.35063858 -0.35074691]]
+1.1326040521259275
+-1.1327272044741654
+[[-0.35561194 -0.3557153 ]
+ [-0.3506587  -0.35077043]]
+1.1336691970536104
+-1.1330278699788676
+[[-0.35597325 -0.35603437]
+ [-0.35119259 -0.35127674]]
+1.133294228838708
+-1.1332282438710917
+[[-0.35599241 -0.35596506]
+ [-0.35110977 -0.35110244]]
+1.132872361806622
+-1.1334848248708738
+[[-0.3557441  -0.35581706]
+ [-0.35069883 -0.35078171]]
+1.1337504482863174
+-1.1333505761722882
+[[-0.35532302 -0.35543385]
+ [-0.35028672 -0.35040564]]
+1.1334539334303209
+-1.1329277514409029
+[[-0.35470192 -0.35480602]
+ [-0.34957041 -0.34967507]]
+1.1331570936379594
+-1.1329067780638253
+[[-0.35547951 -0.35559734]
+ [-0.35039992 -0.35058639]]
+1.1330891472680296
+-1.1329682010664768
+[[-0.35654125 -0.35662534]
+ [-0.35152578 -0.35166075]]
+1.1328506916469139
+-1.1326415148261166
+[[-0.35680403 -0.35692258]
+ [-0.35178554 -0.35195257]]
+1.1325999659302282
+-1.133040645642229
+[[-0.35677566 -0.35694919]
+ [-0.3518649  -0.35207749]]
+1.1325533104888301
+-1.1331665988922401
+[[-0.35661487 -0.35673955]
+ [-0.3517629  -0.35192657]]
+1.132533663225211
+-1.132502128721035
+[[-0.3561593  -0.35626874]
+ [-0.35112716 -0.35126984]]
+1.1328325688904601
+-1.1326947925938886
+[[-0.35623405 -0.35639745]
+ [-0.35115849 -0.35137499]]
+1.1332534791296516
+-1.1332354480552176
+[[-0.35615993 -0.35632955]
+ [-0.35111953 -0.35132195]]
+1.1330865186535566
+-1.1330595476721996
+[[-0.35589455 -0.35602112]
+ [-0.35090069 -0.35107226]]
+1.133269812498178
+-1.1327353000581366
+[[-0.35574723 -0.35586111]
+ [-0.35069744 -0.35085658]]
+1.1330239637342798
+-1.1336996927406502
+[[-0.35578671 -0.35592056]
+ [-0.35075631 -0.35093036]]
+1.133205856659544
+-1.1334933292049123
+[[-0.35571696 -0.35576223]
+ [-0.35070321 -0.3507748 ]]
+1.1330585095155046
+-1.1336040344807472
+[[-0.35540953 -0.3553842 ]
+ [-0.35020703 -0.35020744]]
+1.1330338698462759
+-1.1335840110749036
+[[-0.35533092 -0.35544572]
+ [-0.34991856 -0.35005956]]
+1.1336962889055873
+-1.1329406117323102
+[[-0.3555566  -0.35578967]
+ [-0.35034102 -0.35063708]]
+1.133390951169029
+-1.1332796327403831
+[[-0.35598512 -0.35614077]
+ [-0.35104877 -0.35129262]]
+1.1329515689633611
+-1.1328640862540278
+[[-0.35639743 -0.35639579]
+ [-0.35144209 -0.35153176]]
+1.133379527854037
+-1.1325432045437054
+[[-0.3565189  -0.35666576]
+ [-0.35137803 -0.35161587]]
+1.1331960012046733
+-1.1327490840478753
+[[-0.35689041 -0.35711585]
+ [-0.35195177 -0.35228987]]
+1.1329191865663215
+-1.133199821682064
+[[-0.35660963 -0.35659334]
+ [-0.35170949 -0.35173014]]
+1.1329136273276306
+-1.1328804943804438
+[[-0.35615315 -0.3561863 ]
+ [-0.35104975 -0.35113097]]
+1.1330755865184448
+-1.1323405452031188
+[[-0.35594219 -0.35605219]
+ [-0.35077878 -0.35092697]]
+1.13331310754397
+-1.1334177102125849
+[[-0.35647748 -0.35646631]
+ [-0.35146609 -0.35149851]]
+1.1330582490651426
+-1.1328511263548586
+[[-0.35631535 -0.35629545]
+ [-0.35115415 -0.35113289]]
+1.1333560333691364
+-1.1330287667119059
+[[-0.35587454 -0.35596926]
+ [-0.35071054 -0.35083747]]
+1.132943664752586
+-1.1334467701797397
+[[-0.35609447 -0.35606871]
+ [-0.35111105 -0.35111086]]
+1.1333942800157026
+-1.1334453351711016
+[[-0.35540301 -0.35534351]
+ [-0.35026165 -0.35019609]]
+1.1331352584893977
+-1.1336189648793373
+[[-0.3551179  -0.35510754]
+ [-0.3499227  -0.34992307]]
+1.1331585142505167
+-1.1337792789454817
+[[-0.35614081 -0.35611852]
+ [-0.35094716 -0.35098388]]
+1.132896356331526
+-1.1330061507313807
+[[-0.35637776 -0.35643518]
+ [-0.35118583 -0.35126902]]
+1.1331456575175824
+-1.1325692385487576
+[[-0.356667   -0.35677069]
+ [-0.35190253 -0.35207733]]
+1.1332484272985694
+-1.1334303839677613
+[[-0.35680872 -0.35668215]
+ [-0.35224882 -0.3521752 ]]
+1.133102280730883
+-1.1326949047819395
+[[-0.35664754 -0.35656091]
+ [-0.35185439 -0.35184344]]
+1.1335602209888025
+-1.1327036270790045
+[[-0.35698245 -0.35703216]
+ [-0.35207287 -0.35220428]]
+1.1335925425042572
+-1.1332223372568304
+[[-0.35681514 -0.35680155]
+ [-0.35196367 -0.35197576]]
+1.1334029231193217
+-1.1338502742844476
+[[-0.35665698 -0.35661264]
+ [-0.35165698 -0.35166579]]
+1.1340216008305386
+-1.1333367377463903
+[[-0.35701976 -0.35701905]
+ [-0.35205477 -0.35210485]]
+1.1334946356457347
+-1.1329580270033393
+[[-0.35633918 -0.35616224]
+ [-0.35135612 -0.35117615]]
+1.1331092207423117
+-1.1327465012656706
+[[-0.35657099 -0.35649544]
+ [-0.35131674 -0.351295  ]]
+1.1332221605327246
+-1.1323905430552048
+[[-0.35687878 -0.3568818 ]
+ [-0.35183796 -0.35188988]]
+1.1332478659397782
+-1.134182860447826
+[[-0.35599513 -0.35585913]
+ [-0.35093027 -0.35079017]]
+1.1336499055334306
+-1.13388645587321
+[[-0.35582745 -0.35579355]
+ [-0.35077043 -0.3507739 ]]
+1.1335197110169832
+-1.1334707245128572
+[[-0.35586467 -0.35582431]
+ [-0.35085198 -0.35083697]]
+1.1331271206682674
+-1.1342548947425806
+[[-0.35631875 -0.35626439]
+ [-0.35137918 -0.35139455]]
+1.133396763526782
+-1.1335753945506788
+[[-0.35719726 -0.35715461]
+ [-0.35215031 -0.35216848]]
+1.1333124990007142
+-1.1325831475980097
+[[-0.35740249 -0.35752496]
+ [-0.35261366 -0.35280892]]
+1.1334441686906662
+-1.1330748921553462
+[[-0.35720568 -0.35709833]
+ [-0.35277202 -0.35268822]]
+1.1332679015203067
+-1.1326016369273928
+[[-0.35685874 -0.35660988]
+ [-0.35234339 -0.35211528]]
+1.1336881124239957
+-1.133509177236505
+[[-0.35737731 -0.3572514 ]
+ [-0.35264491 -0.35259363]]
+1.1337765953784058
+-1.133852665594683
+[[-0.35740487 -0.35732843]
+ [-0.35260458 -0.35259005]]
+1.133663057967039
+-1.1336942381267467
+[[-0.35678403 -0.35661674]
+ [-0.35190344 -0.35177997]]
+1.1339942581761966
+-1.1341349650354653
+[[-0.35683332 -0.3566364 ]
+ [-0.35190936 -0.35174648]]
+1.1334310304852788
+-1.1334107532105022
+[[-0.35651393 -0.35632295]
+ [-0.35143547 -0.35125027]]
+1.1330797793406815
+-1.1340702865785102
+[[-0.35644962 -0.35643981]
+ [-0.35111786 -0.35117709]]
+1.1335826406763034
+-1.1336808530766689
+[[-0.35760097 -0.35749307]
+ [-0.35276362 -0.35267832]]
+1.1336773160646783
+-1.1337625415739758
+[[-0.35596507 -0.35569819]
+ [-0.35099611 -0.35069647]]
+1.1343248382098705
+-1.1343797993080313
+[[-0.35535805 -0.35528301]
+ [-0.35022999 -0.35017608]]
+1.133477982358727
+-1.133704631093652
+[[-0.35643984 -0.35646941]
+ [-0.35149705 -0.35158644]]
+1.1336633341011806
+-1.134080705573129
+[[-0.35769387 -0.35768511]
+ [-0.35308914 -0.35318008]]
+1.1332256771834268
+-1.1335701633493052
+[[-0.35788964 -0.3576917 ]
+ [-0.3531227  -0.35298304]]
+1.1341268265834832
+-1.1334815624918972
+[[-0.35688791 -0.35699216]
+ [-0.35182147 -0.35198275]]
+1.1339061082030837
+-1.1333778825766188
+[[-0.35722552 -0.35732959]
+ [-0.35263721 -0.35281026]]
+1.133568206396346
+-1.133997628653874
+[[-0.35766199 -0.35742257]
+ [-0.35327927 -0.35306673]]
+1.1330146252004485
+-1.1341791511157924
+[[-0.35732484 -0.35698206]
+ [-0.35270731 -0.35234922]]
+1.1340862488124017
+-1.133613458147226
+[[-0.35690201 -0.35673242]
+ [-0.35189399 -0.35176783]]
+1.134432054959996
+-1.1349490322798266
+[[-0.35664741 -0.3563726 ]
+ [-0.35167071 -0.35140142]]
+1.1332991862122546
+-1.1355355956223907
+[[-0.35695972 -0.35679742]
+ [-0.35186776 -0.35177582]]
+1.1340506521240084
+-1.1333009835289198
+[[-0.3574527  -0.35719278]
+ [-0.35229248 -0.35205977]]
+1.1329519019065533
+-1.133383581150662
+[[-0.3579224  -0.35779459]
+ [-0.35279127 -0.35272596]]
+1.133829151037287
+-1.1334260305447776
+[[-0.3575154  -0.35733226]
+ [-0.35263215 -0.35246364]]
+1.1331713040297464
+-1.1335494134882318
+[[-0.3569133  -0.35665603]
+ [-0.35213928 -0.35188394]]
+1.1338628518872997
+-1.1342204387029897
+[[-0.35705453 -0.35686803]
+ [-0.35240781 -0.35226471]]
+1.1348061794588191
+-1.1335084869972993
+[[-0.35652229 -0.35635193]
+ [-0.35171257 -0.35155397]]
+1.1338444106088312
+-1.1334524694922048
+[[-0.3570448  -0.35679671]
+ [-0.35238624 -0.35217195]]
+1.1337120114154207
+-1.1333401022907836
+[[-0.35759972 -0.35736736]
+ [-0.35274458 -0.35253779]]
+1.1340146465893453
+-1.1334109800161043
+[[-0.35731513 -0.35730908]
+ [-0.35261277 -0.35263711]]
+1.1333537158434164
+-1.1334175566965445
+[[-0.35723772 -0.35696149]
+ [-0.35292598 -0.35266733]]
+1.1331678052617933
+-1.133787138432468
+[[-0.35691099 -0.35655734]
+ [-0.35218644 -0.35185545]]
+1.1332273134400273
+-1.1347063863019975
+[[-0.35712312 -0.35692794]
+ [-0.35220567 -0.35204888]]
+1.1333707982758954
+-1.1335039542451888
+[[-0.35723464 -0.35702533]
+ [-0.35228204 -0.35209516]]
+1.1334634403388708
+-1.1348214666627492
+[[-0.35725276 -0.35702362]
+ [-0.35222667 -0.35202183]]
+1.1343496869506933
+-1.1340208489204928
+[[-0.35722121 -0.35688106]
+ [-0.35229222 -0.35193883]]
+1.134193800480867
+-1.1337125296915318
+[[-0.35729412 -0.35698892]
+ [-0.35200705 -0.35173228]]
+1.1326214655486704
+-1.1336275412910926
+[[-0.35776493 -0.35769907]
+ [-0.3526356  -0.35258337]]
+1.1340310211518065
+-1.133600874257154
+[[-0.35722814 -0.35706779]
+ [-0.35236993 -0.35221056]]
+1.1336347178402326
+-1.1331436448701546
+[[-0.35731917 -0.35703497]
+ [-0.35266443 -0.35237924]]
+1.133604284504187
+-1.1347242407787455
+[[-0.3571469  -0.3568388 ]
+ [-0.35246793 -0.35213871]]
+1.1336360316109306
+-1.1332770170239166
+[[-0.35712938 -0.35685075]
+ [-0.35262572 -0.35233549]]
+1.1334175032554201
+-1.1336173561897538
+[[-0.35696363 -0.35657307]
+ [-0.3522271  -0.35182009]]
+1.1344405511502225
+-1.1337171535512722
+[[-0.35746481 -0.35719677]
+ [-0.35272098 -0.35240889]]
+1.133724179615751
+-1.1341521564698835
+[[-0.3568795  -0.35671367]
+ [-0.35229852 -0.35210156]]
+1.133134254892726
+-1.1336719989730377
+[[-0.35642503 -0.35604251]
+ [-0.35179926 -0.35137197]]
+1.133581079033565
+-1.1341276543112297
+[[-0.35782018 -0.35747638]
+ [-0.35316565 -0.3528508 ]]
+1.133334077849051
+-1.1352894789576635
+[[-0.35807603 -0.35762494]
+ [-0.35327234 -0.35275951]]
+1.1334417798266265
+-1.1343836783855064
+[[-0.3574727  -0.35728927]
+ [-0.35241166 -0.35224205]]
+1.1333801516571542
+-1.1338153368039032
+[[-0.35820102 -0.35800293]
+ [-0.35323697 -0.35308451]]
+1.1346554020385256
+-1.1348775646133717
+[[-0.35928107 -0.35896605]
+ [-0.35463934 -0.3543847 ]]
+1.1331189289788712
+-1.1349300931624973
+[[-0.35822347 -0.35775697]
+ [-0.35326127 -0.35278151]]
+1.1328839373434076
+-1.1349131104278225
+[[-0.35813449 -0.35803327]
+ [-0.35313308 -0.35309147]]
+1.1332986324067087
+-1.1338002263539213
+[[-0.35839243 -0.35813366]
+ [-0.35387976 -0.35366719]]
+1.1334554766825145
+-1.1341498733819542
+[[-0.35716654 -0.35688766]
+ [-0.3524295  -0.35217044]]
+1.1341317855446371
+-1.1341243067300388
+[[-0.35723597 -0.35696317]
+ [-0.3526477  -0.35237096]]
+1.1334502720226163
+-1.1334491679045338
+[[-0.35745025 -0.35708599]
+ [-0.35289073 -0.35254142]]
+1.1335708741860764
+-1.1344474871860446
+[[-0.35813491 -0.35777195]
+ [-0.35337032 -0.35301208]]
+1.1331189023188097
+-1.1341050980600806
+[[-0.35692025 -0.35680172]
+ [-0.35203415 -0.35189566]]
+1.1330571886814567
+-1.133785932193697
+[[-0.35674913 -0.3566028 ]
+ [-0.35206218 -0.35193861]]
+1.1343513230964555
+-1.1344048738058652
+[[-0.35795499 -0.35758934]
+ [-0.35342717 -0.35310209]]
+1.134645149584744
+-1.1350960106709715
+[[-0.35786624 -0.35742679]
+ [-0.35300613 -0.35254269]]
+1.1340344266604214
+-1.1346124773935937
+[[-0.35792085 -0.35758518]
+ [-0.35282935 -0.35250817]]
+1.1342758362673033
+-1.1341507232540489
+[[-0.35885278 -0.35868107]
+ [-0.35386432 -0.35375941]]
+1.1338761238751895
+-1.134531724500258
+[[-0.35806169 -0.35760723]
+ [-0.35305045 -0.35257818]]
+1.1333292935390071
+-1.1346576566743232
+[[-0.35858621 -0.35827808]
+ [-0.35355713 -0.35328   ]]
+1.1335909208530395
+-1.1348276426165513
+[[-0.35870504 -0.358486  ]
+ [-0.35382048 -0.35364446]]
+1.1329861971296613
+-1.134230781733096
+[[-0.35743069 -0.35700132]
+ [-0.35266797 -0.35218592]]
+1.133555551463485
+-1.133831095531848
+[[-0.35698527 -0.35661934]
+ [-0.35225523 -0.35186673]]
+1.1336265979010174
+-1.134269817779441
+[[-0.35695414 -0.35664289]
+ [-0.35237012 -0.35204839]]
+1.1344391605351465
+-1.1336057131505066
+[[-0.35738814 -0.35692502]
+ [-0.35297685 -0.35253394]]
+1.1334003588562285
+-1.134211633338176
+[[-0.35767332 -0.35713169]
+ [-0.35281008 -0.35222857]]
+1.1332107238820095
+-1.1358512296092582
+[[-0.35732381 -0.3573235 ]
+ [-0.35237088 -0.35239961]]
+1.1340610575399122
+-1.1345785826375563
+[[-0.3574746  -0.35711444]
+ [-0.35311336 -0.35270759]]
+1.1342519645972535
+-1.1343111562224926
+[[-0.35655788 -0.35609702]
+ [-0.35180179 -0.35132792]]
+1.1347812348167026
+-1.1347466459332045
+[[-0.35761547 -0.35717468]
+ [-0.35273867 -0.352315  ]]
+1.1347684094824924
+-1.1342222182749329
+[[-0.35790378 -0.35770239]
+ [-0.35278982 -0.35258504]]
+1.1357028078372016
+-1.1351541822757658
+[[-0.3589927  -0.35867002]
+ [-0.35439176 -0.35410766]]
+1.1337868713133028
+-1.1346253616482884
+[[-0.35773144 -0.35717784]
+ [-0.35277558 -0.35214833]]
+1.133171668468152
+-1.1351066344755092
+[[-0.35828552 -0.35803804]
+ [-0.35332379 -0.35312449]]
+1.1333202102622992
+-1.1338709100838464
+[[-0.35897631 -0.35867349]
+ [-0.3542986  -0.35396248]]
+1.133230662542927
+-1.1347196821671923
+[[-0.35686736 -0.3565747 ]
+ [-0.35206306 -0.35171754]]
+1.133015820985292
+-1.1344936692877883
+[[-0.35628532 -0.35608052]
+ [-0.3515022  -0.35128872]]
+1.1348038024517964
+-1.1352020451931286
+[[-0.35644421 -0.35615055]
+ [-0.35186564 -0.35155626]]
+1.1339392479894375
+-1.135509211950397
+[[-0.3570042  -0.35658465]
+ [-0.35209604 -0.35168039]]
+1.1340435269451534
+-1.1348641632720773
+[[-0.35811738 -0.35792529]
+ [-0.35314006 -0.35296726]]
+1.133395849687354
+-1.135546284240236
+[[-0.35757956 -0.35748029]
+ [-0.35265283 -0.35252834]]
+1.134439196454784
+-1.1353607848020204
+[[-0.35738203 -0.3569723 ]
+ [-0.35286014 -0.35239718]]
+1.134490275431887
+-1.1339844179110727
+[[-0.35708307 -0.35664998]
+ [-0.35228567 -0.35181919]]
+1.1345802095694868
+-1.1342318908021343
+[[-0.35714134 -0.35682959]
+ [-0.35217924 -0.35184932]]
+1.1351567500202437
+-1.1349554523317766
+[[-0.35819685 -0.35787132]
+ [-0.35335645 -0.35306843]]
+1.1347118238137155
+-1.1348092462710573
+[[-0.35808995 -0.3576048 ]
+ [-0.35324574 -0.35271381]]
+1.1339747552305992
+-1.1347920465703298
+[[-0.3582479  -0.35790347]
+ [-0.35298561 -0.35266884]]
+1.1338505756834079
+-1.1341990057412612
+[[-0.35907302 -0.35870618]
+ [-0.35423072 -0.35383106]]
+1.1332060668247381
+-1.1349349083501774
+[[-0.35707417 -0.3567512 ]
+ [-0.35207065 -0.35166881]]
+1.1334731719669002
+-1.135093873981479
+[[-0.35671396 -0.3564812 ]
+ [-0.35196284 -0.35172445]]
+1.1337673169678189
+-1.1351357842210594
+[[-0.35632377 -0.35585025]
+ [-0.35167401 -0.35112202]]
+1.1341081682943128
+-1.134954805856716
+[[-0.35626922 -0.35588627]
+ [-0.35149631 -0.35111683]]
+1.1345880906956511
+-1.1351975392383378
+[[-0.35736812 -0.35710808]
+ [-0.35231798 -0.35208409]]
+1.1343952254090248
+-1.135695200075767
+[[-0.35758425 -0.35734952]
+ [-0.35272266 -0.35243563]]
+1.133956410617318
+-1.1352173417649236
+[[-0.35665683 -0.35641087]
+ [-0.35203583 -0.35174174]]
+1.1353480686860675
+-1.1361719543802988
+[[-0.35611156 -0.35563692]
+ [-0.3512652  -0.35073277]]
+1.1354272424348555
+-1.1344748034012146
+[[-0.35755871 -0.35732446]
+ [-0.3527465  -0.35255277]]
+1.1354243699534599
+-1.134604335093002
+[[-0.35792275 -0.35746002]
+ [-0.35314598 -0.35263595]]
+1.134967573837337
+-1.1349085353651642
+[[-0.35822623 -0.35780994]
+ [-0.35319554 -0.35275329]]
+1.1347199547339437
+-1.1344047259110734
+[[-0.35861661 -0.35843559]
+ [-0.35341816 -0.3532395 ]]
+1.1343667346278536
+-1.134012846567904
+[[-0.35838979 -0.35812013]
+ [-0.35334664 -0.3530347 ]]
+1.1342298998718876
+-1.1343303378428566
+[[-0.35768738 -0.35744251]
+ [-0.35275249 -0.3524616 ]]
+1.1340907972845735
+-1.1349830856442094
+[[-0.35665855 -0.35640654]
+ [-0.3517341  -0.35146663]]
+1.1337720830951208
+-1.1352164184030737
+[[-0.35624704 -0.35603939]
+ [-0.35127414 -0.35105391]]
+1.1332500814760558
+-1.1360249077491376
+[[-0.35644519 -0.35612664]
+ [-0.3515877  -0.35126486]]
+1.13400977449104
+-1.1373380266841064
+[[-0.35717202 -0.35689046]
+ [-0.35226748 -0.35199069]]
+1.1360566737145579
+-1.1369885118298955
+[[-0.35734019 -0.3570786 ]
+ [-0.35218009 -0.35189807]]
+1.1348937967815775
+-1.1353403227206476
+[[-0.35637748 -0.35616934]
+ [-0.35138455 -0.35106199]]
+1.1345774350219244
+-1.1343156607549616
+[[-0.35611687 -0.35591213]
+ [-0.3511556  -0.35093895]]
+1.1373238939417465
+-1.1345040717323074
+[[-0.35653407 -0.35630796]
+ [-0.35176324 -0.35149333]]
+1.1353620470460908
+-1.1342721133406157
+[[-0.35714557 -0.35670633]
+ [-0.35238859 -0.3518661 ]]
+1.13443087620264
+-1.135404020209463
+[[-0.3568331  -0.35648152]
+ [-0.35184239 -0.35143643]]
+1.1357765393241266
+-1.1352282717050226
+[[-0.35789764 -0.3575287 ]
+ [-0.35298361 -0.35257156]]
+1.135093080811893
+-1.1340392368813026
+[[-0.3580536  -0.35759563]
+ [-0.35268352 -0.35215942]]
+1.1343148250467017
+-1.13544359477219
+[[-0.35743025 -0.35739228]
+ [-0.35213736 -0.35203928]]
+1.1347616061592056
+-1.1349936007799544
+[[-0.35603883 -0.35576327]
+ [-0.35091724 -0.35055271]]
+1.1349093229026335
+-1.135609680811255
+[[-0.35571313 -0.3554661 ]
+ [-0.35071466 -0.35040273]]
+1.1347980922276597
+-1.135414979080961
+[[-0.35627672 -0.35602184]
+ [-0.35131723 -0.3510593 ]]
+1.1344976831818938
+-1.1361412525233487
+[[-0.35705542 -0.35660716]
+ [-0.35244262 -0.35187584]]
+1.1358587279279233
+-1.1377143572088129
+[[-0.35664382 -0.35611644]
+ [-0.35169081 -0.3511041 ]]
+1.135013258282565
+-1.1355222604172375
+[[-0.35653648 -0.35639874]
+ [-0.3512961  -0.35104707]]
+1.1354297418565609
+-1.134451423602729
+[[-0.35720441 -0.35701298]
+ [-0.35263541 -0.35238629]]
+1.1351985228603274
+-1.13434433797352
+[[-0.3565695  -0.35614685]
+ [-0.35207563 -0.35153555]]
+1.1353836106610096
+-1.1350265153487928
+[[-0.35591823 -0.35555861]
+ [-0.35115116 -0.35072656]]
+1.1352114575883037
+-1.1347654800932687
+[[-0.35661402 -0.35629387]
+ [-0.35159701 -0.35121514]]
+1.1344320963019894
+-1.1355306864157637
+[[-0.35703158 -0.35692343]
+ [-0.35186607 -0.35169002]]
+1.1354198504025144
+-1.1357936862135638
+[[-0.35776443 -0.35759753]
+ [-0.35259972 -0.35240131]]
+1.1346004073351117
+-1.1356422344140298
+[[-0.35683739 -0.35682345]
+ [-0.35148207 -0.35137683]]
+1.1345979372958117
+-1.134540340943587
+[[-0.35624638 -0.3559856 ]
+ [-0.35133226 -0.35093694]]
+1.1351174631274685
+-1.1350335025354525
+[[-0.35519342 -0.35504536]
+ [-0.3502212  -0.35000057]]
+1.1356587758402021
+-1.1362581701935435
+[[-0.35680622 -0.35636935]
+ [-0.35199834 -0.35149346]]
+1.1352676368397232
+-1.1366120102044446
+[[-0.3563148  -0.35597033]
+ [-0.35134823 -0.35089102]]
+1.1346987544104292
+-1.1365785710792904
+[[-0.35639848 -0.35631472]
+ [-0.35141665 -0.35128992]]
+1.1346713819452208
+-1.1350905688127133
+[[-0.35657873 -0.35630957]
+ [-0.35180787 -0.35145125]]
+1.1354488323142058
+-1.13393566005914
+[[-0.35647478 -0.35622214]
+ [-0.35162941 -0.35132234]]
+1.135241380907971
+-1.1349597555370574
+[[-0.35690534 -0.35662673]
+ [-0.35204399 -0.35167999]]
+1.1356885770231449
+-1.135324926864624
+[[-0.35612143 -0.35593596]
+ [-0.35124998 -0.3509581 ]]
+1.1351687559444459
+-1.1349807837905697
+[[-0.35614174 -0.35603605]
+ [-0.35082634 -0.35070448]]
+1.134875909618388
+-1.134296904740926
+[[-0.35795115 -0.35774474]
+ [-0.35309103 -0.35277436]]
+1.1350584526094285
+-1.1354405745695446
+[[-0.35678097 -0.35657676]
+ [-0.35141902 -0.35111792]]
+1.1348640303612312
+-1.1362971816025325
+[[-0.35656555 -0.35646186]
+ [-0.35148005 -0.35124106]]
+1.135730969346552
+-1.1359457814833978
+[[-0.35579047 -0.35573398]
+ [-0.3507525  -0.35063797]]
+1.135918123733309
+-1.1345046487510513
+[[-0.35516913 -0.35503693]
+ [-0.3502088  -0.34998152]]
+1.1355172880748443
+-1.1358271802770734
+[[-0.35581718 -0.35552095]
+ [-0.35086821 -0.3505021 ]]
+1.1357060126627334
+-1.1377312661738022
+[[-0.35641118 -0.35626273]
+ [-0.35139639 -0.35115724]]
+1.135071218467231
+-1.1356788205506794
+[[-0.35558835 -0.35541297]
+ [-0.3504088  -0.35011504]]
+1.1357833226048875
+-1.1348626386643559
+[[-0.35553103 -0.3555054 ]
+ [-0.35050969 -0.35038762]]
+1.1358698588455256
+-1.1341239006854213
+[[-0.35549471 -0.35524491]
+ [-0.35057875 -0.35021177]]
+1.1360750836329108
+-1.1354159531000483
+[[-0.3558007  -0.35577497]
+ [-0.35073469 -0.35065882]]
+1.1361718090566781
+-1.1360171098787544
+[[-0.35552332 -0.35531627]
+ [-0.35056074 -0.35023043]]
+1.1354309085864585
+-1.1345562698754224
+[[-0.35548005 -0.3554448 ]
+ [-0.35034783 -0.35023233]]
+1.135413553413326
+-1.135273348602219
+[[-0.3564859  -0.35627712]
+ [-0.35148072 -0.35119667]]
+1.1360903635996344
+-1.1351187707445798
+[[-0.35675347 -0.35662908]
+ [-0.35124161 -0.35101028]]
+1.1364406932279483
+-1.1351064323359557
+[[-0.35534195 -0.35555849]
+ [-0.34993102 -0.35005282]]
+1.1364232680931057
+-1.1335795450122073
+Moviepy - Building video ../photo_video/test09/../test09.mp4.
+Moviepy - Writing video ../photo_video/test09/../test09.mp4
+
+t:   0%|          | 0/301 [00:00<?, ?it/s, now=None]t:   1%|          | 3/301 [00:00<00:13, 22.44it/s, now=None]t:   2%|▏         | 6/301 [00:00<00:21, 13.69it/s, now=None]t:   3%|▎         | 8/301 [00:00<00:23, 12.60it/s, now=None]t:   3%|▎         | 10/301 [00:00<00:24, 12.08it/s, now=None]t:   4%|▍         | 12/301 [00:00<00:24, 11.77it/s, now=None]t:   5%|▍         | 14/301 [00:01<00:24, 11.55it/s, now=None]t:   5%|▌         | 16/301 [00:01<00:24, 11.41it/s, now=None]t:   6%|▌         | 18/301 [00:01<00:24, 11.34it/s, now=None]t:   7%|▋         | 20/301 [00:01<00:24, 11.30it/s, now=None]t:   7%|▋         | 22/301 [00:01<00:24, 11.24it/s, now=None]t:   8%|▊         | 24/301 [00:02<00:24, 11.19it/s, now=None]t:   9%|▊         | 26/301 [00:02<00:24, 11.21it/s, now=None]t:   9%|▉         | 28/301 [00:02<00:24, 11.20it/s, now=None]t:  10%|▉         | 30/301 [00:02<00:24, 11.19it/s, now=None]t:  11%|█         | 32/301 [00:02<00:24, 11.19it/s, now=None]t:  11%|█▏        | 34/301 [00:02<00:23, 11.20it/s, now=None]t:  12%|█▏        | 36/301 [00:03<00:23, 11.24it/s, now=None]t:  13%|█▎        | 38/301 [00:03<00:23, 11.23it/s, now=None]t:  13%|█▎        | 40/301 [00:03<00:23, 11.20it/s, now=None]t:  14%|█▍        | 42/301 [00:03<00:23, 11.22it/s, now=None]t:  15%|█▍        | 44/301 [00:03<00:22, 11.19it/s, now=None]t:  15%|█▌        | 46/301 [00:03<00:22, 11.14it/s, now=None]t:  16%|█▌        | 48/301 [00:04<00:22, 11.07it/s, now=None]t:  17%|█▋        | 50/301 [00:04<00:22, 11.03it/s, now=None]t:  17%|█▋        | 52/301 [00:04<00:22, 11.05it/s, now=None]t:  18%|█▊        | 54/301 [00:04<00:22, 11.12it/s, now=None]t:  19%|█▊        | 56/301 [00:04<00:23, 10.57it/s, now=None]t:  19%|█▉        | 58/301 [00:05<00:24, 10.10it/s, now=None]t:  20%|█▉        | 60/301 [00:05<00:25,  9.55it/s, now=None]t:  20%|██        | 61/301 [00:05<00:25,  9.44it/s, now=None]t:  21%|██        | 62/301 [00:05<00:25,  9.41it/s, now=None]t:  21%|██        | 63/301 [00:05<00:25,  9.40it/s, now=None]t:  21%|██▏       | 64/301 [00:05<00:25,  9.44it/s, now=None]t:  22%|██▏       | 65/301 [00:05<00:25,  9.35it/s, now=None]t:  22%|██▏       | 66/301 [00:06<00:25,  9.36it/s, now=None]t:  22%|██▏       | 67/301 [00:06<00:25,  9.35it/s, now=None]t:  23%|██▎       | 68/301 [00:06<00:24,  9.33it/s, now=None]t:  23%|██▎       | 69/301 [00:06<00:25,  9.21it/s, now=None]t:  23%|██▎       | 70/301 [00:06<00:24,  9.24it/s, now=None]t:  24%|██▎       | 71/301 [00:06<00:25,  9.20it/s, now=None]t:  24%|██▍       | 72/301 [00:06<00:24,  9.26it/s, now=None]t:  24%|██▍       | 73/301 [00:06<00:24,  9.22it/s, now=None]t:  25%|██▍       | 74/301 [00:06<00:24,  9.25it/s, now=None]t:  25%|██▍       | 75/301 [00:07<00:25,  8.91it/s, now=None]t:  25%|██▌       | 76/301 [00:07<00:24,  9.03it/s, now=None]t:  26%|██▌       | 77/301 [00:07<00:24,  9.12it/s, now=None]t:  26%|██▌       | 78/301 [00:07<00:24,  9.22it/s, now=None]t:  26%|██▌       | 79/301 [00:07<00:23,  9.28it/s, now=None]t:  27%|██▋       | 80/301 [00:07<00:23,  9.32it/s, now=None]t:  27%|██▋       | 81/301 [00:07<00:26,  8.33it/s, now=None]t:  27%|██▋       | 82/301 [00:07<00:25,  8.49it/s, now=None]t:  28%|██▊       | 83/301 [00:07<00:24,  8.73it/s, now=None]t:  28%|██▊       | 84/301 [00:08<00:24,  8.90it/s, now=None]t:  28%|██▊       | 85/301 [00:08<00:23,  9.01it/s, now=None]t:  29%|██▊       | 86/301 [00:08<00:23,  9.09it/s, now=None]t:  29%|██▉       | 87/301 [00:08<00:23,  9.13it/s, now=None]t:  29%|██▉       | 88/301 [00:08<00:23,  9.17it/s, now=None]t:  30%|██▉       | 89/301 [00:08<00:23,  9.20it/s, now=None]t:  30%|██▉       | 90/301 [00:08<00:22,  9.22it/s, now=None]t:  30%|███       | 91/301 [00:08<00:22,  9.22it/s, now=None]t:  31%|███       | 93/301 [00:08<00:21,  9.74it/s, now=None]t:  32%|███▏      | 95/301 [00:09<00:20, 10.11it/s, now=None]t:  32%|███▏      | 97/301 [00:09<00:19, 10.36it/s, now=None]t:  33%|███▎      | 99/301 [00:09<00:19, 10.50it/s, now=None]t:  34%|███▎      | 101/301 [00:09<00:18, 10.68it/s, now=None]t:  34%|███▍      | 103/301 [00:09<00:19, 10.29it/s, now=None]t:  35%|███▍      | 105/301 [00:10<00:20,  9.71it/s, now=None]t:  35%|███▌      | 106/301 [00:10<00:20,  9.66it/s, now=None]t:  36%|███▌      | 107/301 [00:10<00:20,  9.37it/s, now=None]t:  36%|███▌      | 108/301 [00:10<00:22,  8.66it/s, now=None]t:  36%|███▌      | 109/301 [00:10<00:21,  8.85it/s, now=None]t:  37%|███▋      | 110/301 [00:10<00:21,  8.88it/s, now=None]t:  37%|███▋      | 111/301 [00:10<00:22,  8.26it/s, now=None]t:  37%|███▋      | 112/301 [00:10<00:22,  8.57it/s, now=None]t:  38%|███▊      | 113/301 [00:11<00:21,  8.72it/s, now=None]t:  38%|███▊      | 114/301 [00:11<00:21,  8.89it/s, now=None]t:  38%|███▊      | 115/301 [00:11<00:20,  9.02it/s, now=None]t:  39%|███▊      | 116/301 [00:11<00:22,  8.14it/s, now=None]t:  39%|███▉      | 117/301 [00:11<00:22,  8.20it/s, now=None]t:  39%|███▉      | 118/301 [00:11<00:21,  8.48it/s, now=None]t:  40%|███▉      | 119/301 [00:11<00:20,  8.72it/s, now=None]t:  40%|███▉      | 120/301 [00:11<00:20,  8.92it/s, now=None]t:  40%|████      | 121/301 [00:12<00:19,  9.06it/s, now=None]t:  41%|████      | 122/301 [00:12<00:19,  9.16it/s, now=None]t:  41%|████      | 123/301 [00:12<00:19,  9.24it/s, now=None]t:  41%|████      | 124/301 [00:12<00:19,  9.30it/s, now=None]t:  42%|████▏     | 125/301 [00:12<00:18,  9.28it/s, now=None]t:  42%|████▏     | 126/301 [00:12<00:18,  9.29it/s, now=None]t:  42%|████▏     | 127/301 [00:12<00:18,  9.30it/s, now=None]t:  43%|████▎     | 128/301 [00:12<00:18,  9.33it/s, now=None]t:  43%|████▎     | 129/301 [00:12<00:19,  8.92it/s, now=None]t:  44%|████▎     | 131/301 [00:13<00:17,  9.76it/s, now=None]t:  44%|████▍     | 133/301 [00:13<00:16,  9.92it/s, now=None]t:  45%|████▍     | 135/301 [00:13<00:16, 10.25it/s, now=None]t:  46%|████▌     | 137/301 [00:13<00:15, 10.45it/s, now=None]t:  46%|████▌     | 139/301 [00:13<00:15, 10.59it/s, now=None]t:  47%|████▋     | 141/301 [00:14<00:14, 10.69it/s, now=None]t:  48%|████▊     | 143/301 [00:14<00:14, 10.76it/s, now=None]t:  48%|████▊     | 145/301 [00:14<00:14, 10.79it/s, now=None]t:  49%|████▉     | 147/301 [00:14<00:14, 10.84it/s, now=None]t:  50%|████▉     | 149/301 [00:14<00:14, 10.82it/s, now=None]t:  50%|█████     | 151/301 [00:14<00:13, 10.91it/s, now=None]t:  51%|█████     | 153/301 [00:15<00:13, 10.97it/s, now=None]t:  51%|█████▏    | 155/301 [00:15<00:13, 11.02it/s, now=None]t:  52%|█████▏    | 157/301 [00:15<00:13, 10.33it/s, now=None]t:  53%|█████▎    | 159/301 [00:15<00:15,  9.22it/s, now=None]t:  53%|█████▎    | 160/301 [00:15<00:15,  9.19it/s, now=None]t:  53%|█████▎    | 161/301 [00:15<00:15,  9.19it/s, now=None]t:  54%|█████▍    | 162/301 [00:16<00:15,  9.20it/s, now=None]t:  54%|█████▍    | 163/301 [00:16<00:15,  9.19it/s, now=None]t:  54%|█████▍    | 164/301 [00:16<00:14,  9.21it/s, now=None]t:  55%|█████▍    | 165/301 [00:16<00:14,  9.23it/s, now=None]t:  55%|█████▌    | 166/301 [00:16<00:14,  9.25it/s, now=None]t:  55%|█████▌    | 167/301 [00:16<00:14,  9.19it/s, now=None]t:  56%|█████▌    | 168/301 [00:16<00:14,  9.25it/s, now=None]t:  56%|█████▌    | 169/301 [00:16<00:14,  9.27it/s, now=None]t:  56%|█████▋    | 170/301 [00:16<00:14,  9.29it/s, now=None]t:  57%|█████▋    | 171/301 [00:17<00:15,  8.24it/s, now=None]t:  57%|█████▋    | 172/301 [00:17<00:15,  8.44it/s, now=None]t:  57%|█████▋    | 173/301 [00:17<00:14,  8.72it/s, now=None]t:  58%|█████▊    | 174/301 [00:17<00:16,  7.84it/s, now=None]t:  58%|█████▊    | 175/301 [00:17<00:16,  7.63it/s, now=None]t:  58%|█████▊    | 176/301 [00:17<00:15,  8.01it/s, now=None]t:  59%|█████▉    | 177/301 [00:17<00:15,  8.17it/s, now=None]t:  59%|█████▉    | 178/301 [00:17<00:15,  8.18it/s, now=None]t:  59%|█████▉    | 179/301 [00:18<00:14,  8.14it/s, now=None]t:  60%|█████▉    | 180/301 [00:18<00:14,  8.08it/s, now=None]t:  60%|██████    | 181/301 [00:18<00:14,  8.07it/s, now=None]t:  60%|██████    | 182/301 [00:18<00:14,  8.09it/s, now=None]t:  61%|██████    | 183/301 [00:18<00:14,  8.16it/s, now=None]t:  61%|██████    | 184/301 [00:18<00:15,  7.47it/s, now=None]t:  61%|██████▏   | 185/301 [00:18<00:15,  7.71it/s, now=None]t:  62%|██████▏   | 186/301 [00:18<00:14,  8.09it/s, now=None]t:  62%|██████▏   | 187/301 [00:19<00:13,  8.47it/s, now=None]t:  62%|██████▏   | 188/301 [00:19<00:12,  8.71it/s, now=None]t:  63%|██████▎   | 189/301 [00:19<00:12,  8.87it/s, now=None]t:  63%|██████▎   | 190/301 [00:19<00:12,  8.99it/s, now=None]t:  63%|██████▎   | 191/301 [00:19<00:12,  9.09it/s, now=None]t:  64%|██████▍   | 192/301 [00:19<00:11,  9.16it/s, now=None]t:  64%|██████▍   | 193/301 [00:19<00:11,  9.19it/s, now=None]t:  64%|██████▍   | 194/301 [00:19<00:13,  8.21it/s, now=None]t:  65%|██████▍   | 195/301 [00:20<00:12,  8.19it/s, now=None]t:  65%|██████▌   | 196/301 [00:20<00:12,  8.52it/s, now=None]t:  65%|██████▌   | 197/301 [00:20<00:11,  8.73it/s, now=None]t:  66%|██████▌   | 198/301 [00:20<00:12,  7.96it/s, now=None]t:  66%|██████▌   | 199/301 [00:20<00:12,  7.85it/s, now=None]t:  66%|██████▋   | 200/301 [00:20<00:12,  8.23it/s, now=None]t:  67%|██████▋   | 201/301 [00:20<00:11,  8.53it/s, now=None]t:  67%|██████▋   | 202/301 [00:20<00:12,  7.75it/s, now=None]t:  67%|██████▋   | 203/301 [00:21<00:12,  7.89it/s, now=None]t:  68%|██████▊   | 204/301 [00:21<00:11,  8.26it/s, now=None]t:  68%|██████▊   | 205/301 [00:21<00:12,  7.64it/s, now=None]t:  68%|██████▊   | 206/301 [00:21<00:12,  7.77it/s, now=None]t:  69%|██████▉   | 208/301 [00:21<00:10,  8.87it/s, now=None]t:  70%|██████▉   | 210/301 [00:21<00:09,  9.69it/s, now=None]t:  70%|███████   | 212/301 [00:21<00:08, 10.17it/s, now=None]t:  71%|███████   | 214/301 [00:22<00:08, 10.46it/s, now=None]t:  72%|███████▏  | 216/301 [00:22<00:08,  9.76it/s, now=None]t:  72%|███████▏  | 217/301 [00:22<00:08,  9.65it/s, now=None]t:  72%|███████▏  | 218/301 [00:22<00:08,  9.58it/s, now=None]t:  73%|███████▎  | 219/301 [00:22<00:08,  9.50it/s, now=None]t:  73%|███████▎  | 220/301 [00:22<00:09,  8.55it/s, now=None]t:  73%|███████▎  | 221/301 [00:22<00:09,  8.53it/s, now=None]t:  74%|███████▍  | 222/301 [00:23<00:09,  8.11it/s, now=None]t:  74%|███████▍  | 223/301 [00:23<00:09,  8.07it/s, now=None]t:  74%|███████▍  | 224/301 [00:23<00:10,  7.60it/s, now=None]t:  75%|███████▌  | 226/301 [00:23<00:08,  8.73it/s, now=None]t:  76%|███████▌  | 228/301 [00:23<00:07,  9.48it/s, now=None]t:  76%|███████▌  | 229/301 [00:23<00:08,  8.94it/s, now=None]t:  76%|███████▋  | 230/301 [00:23<00:07,  8.90it/s, now=None]t:  77%|███████▋  | 232/301 [00:24<00:07,  9.63it/s, now=None]t:  78%|███████▊  | 234/301 [00:24<00:06, 10.01it/s, now=None]t:  78%|███████▊  | 236/301 [00:24<00:06, 10.33it/s, now=None]t:  79%|███████▉  | 238/301 [00:24<00:05, 10.53it/s, now=None]t:  80%|███████▉  | 240/301 [00:24<00:05, 10.64it/s, now=None]t:  80%|████████  | 242/301 [00:25<00:05, 10.73it/s, now=None]t:  81%|████████  | 244/301 [00:25<00:05, 10.79it/s, now=None]t:  82%|████████▏ | 246/301 [00:25<00:05, 10.82it/s, now=None]t:  82%|████████▏ | 248/301 [00:25<00:04, 10.88it/s, now=None]t:  83%|████████▎ | 250/301 [00:25<00:04, 10.89it/s, now=None]t:  84%|████████▎ | 252/301 [00:25<00:04, 10.94it/s, now=None]t:  84%|████████▍ | 254/301 [00:26<00:04, 10.94it/s, now=None]t:  85%|████████▌ | 256/301 [00:26<00:04, 10.45it/s, now=None]t:  86%|████████▌ | 258/301 [00:26<00:04, 10.02it/s, now=None]t:  86%|████████▋ | 260/301 [00:26<00:04,  9.80it/s, now=None]t:  87%|████████▋ | 261/301 [00:26<00:04,  9.57it/s, now=None]t:  87%|████████▋ | 262/301 [00:27<00:04,  9.51it/s, now=None]t:  87%|████████▋ | 263/301 [00:27<00:04,  9.45it/s, now=None]t:  88%|████████▊ | 264/301 [00:27<00:04,  8.53it/s, now=None]t:  88%|████████▊ | 265/301 [00:27<00:04,  8.68it/s, now=None]t:  88%|████████▊ | 266/301 [00:27<00:03,  8.82it/s, now=None]t:  89%|████████▊ | 267/301 [00:27<00:03,  8.93it/s, now=None]t:  89%|████████▉ | 268/301 [00:27<00:03,  9.00it/s, now=None]t:  89%|████████▉ | 269/301 [00:27<00:03,  8.13it/s, now=None]t:  90%|████████▉ | 270/301 [00:28<00:03,  7.95it/s, now=None]t:  90%|█████████ | 271/301 [00:28<00:04,  7.49it/s, now=None]t:  90%|█████████ | 272/301 [00:28<00:03,  7.69it/s, now=None]t:  91%|█████████ | 273/301 [00:28<00:03,  8.10it/s, now=None]t:  91%|█████████ | 274/301 [00:28<00:03,  8.43it/s, now=None]t:  91%|█████████▏| 275/301 [00:28<00:03,  7.90it/s, now=None]t:  92%|█████████▏| 276/301 [00:28<00:03,  8.25it/s, now=None]t:  92%|█████████▏| 277/301 [00:28<00:02,  8.49it/s, now=None]t:  92%|█████████▏| 278/301 [00:28<00:02,  8.72it/s, now=None]t:  93%|█████████▎| 279/301 [00:29<00:02,  8.85it/s, now=None]t:  93%|█████████▎| 280/301 [00:29<00:02,  8.57it/s, now=None]t:  93%|█████████▎| 281/301 [00:29<00:02,  8.76it/s, now=None]t:  94%|█████████▎| 282/301 [00:29<00:02,  8.92it/s, now=None]t:  94%|█████████▍| 283/301 [00:29<00:02,  8.03it/s, now=None]t:  94%|█████████▍| 284/301 [00:29<00:02,  7.95it/s, now=None]t:  95%|█████████▍| 285/301 [00:29<00:01,  8.21it/s, now=None]t:  95%|█████████▌| 286/301 [00:29<00:01,  8.42it/s, now=None]t:  95%|█████████▌| 287/301 [00:30<00:01,  8.63it/s, now=None]t:  96%|█████████▌| 288/301 [00:30<00:01,  8.93it/s, now=None]t:  96%|█████████▋| 290/301 [00:30<00:01,  9.07it/s, now=None]t:  97%|█████████▋| 291/301 [00:30<00:01,  9.08it/s, now=None]t:  97%|█████████▋| 292/301 [00:30<00:01,  8.92it/s, now=None]t:  97%|█████████▋| 293/301 [00:30<00:00,  8.63it/s, now=None]t:  98%|█████████▊| 294/301 [00:30<00:00,  8.39it/s, now=None]t:  98%|█████████▊| 295/301 [00:30<00:00,  8.28it/s, now=None]t:  98%|█████████▊| 296/301 [00:31<00:00,  8.20it/s, now=None]t:  99%|█████████▊| 297/301 [00:31<00:00,  7.54it/s, now=None]t:  99%|█████████▉| 298/301 [00:31<00:00,  7.97it/s, now=None]t:  99%|█████████▉| 299/301 [00:31<00:00,  8.32it/s, now=None]t: 100%|█████████▉| 300/301 [00:31<00:00,  8.26it/s, now=None]                                                              Moviepy - Done !
+Moviepy - video ready ../photo_video/test09/../test09.mp4

@@ -1,6 +1,6 @@
 python3 create_matrix.py;
 bash run.sh;
-savedir="../data/test10/"
+savedir="../data/test34/"
 src1dir=$savedir"RunPolar"
 mkdir $src1dir
 cp -r ../src $savedir
@@ -13,7 +13,7 @@ cp -r ./ $src1dir
 # # cp DrawParticle.py $src1dir
 # cp DrawTurbulence.py $src1dir
 # cp visual_video.py $src1dir
-CUDA_VISIBLE_DEVICES=1 perl run_cuda.pl;
+CUDA_VISIBLE_DEVICES=2 perl run_cuda.pl;
 # python3 $src1dir"/draw_polar.py"
 
 mv *.dat $savedir

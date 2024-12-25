@@ -76,7 +76,7 @@ void ABParticleField::initPolarField() {
 void ExpoConf(const std::string& str_t) {
     std::ofstream ConfFile;
     int PrecData = 8;
-    std::string ConfFileName = "../data/test10/conf_" + str_t + ".dat";
+    std::string ConfFileName = "../data/test54/conf_" + str_t + ".dat";
     ConfFile.open(ConfFileName.c_str());
 
     if (!ConfFile.is_open()) {
@@ -89,6 +89,8 @@ void ExpoConf(const std::string& str_t) {
             << pt.y[idx] << ' '
             << pt.px[idx] << ' '
             << pt.py[idx] << ' ';
+            // << pt.cellPxx[idx] << ' '
+            // << pt.cellPxy[idx] << ' ';
         ConfFile << std::endl; 
     }
 
@@ -469,15 +471,8 @@ void Init_Coords(int flag, Particle pt, Parameter PM) {
             int flag = 0;
             pt.x[n] = u(e) * PM.boxX;
             pt.y[n] = u(e) * PM.boxY;
-            // printf("1");
-// printf("1");
-
             pt.px[n] = cos(3140*u(e));
             pt.py[n] = sin(3140*u(e));
-            // pt.px[n] =-1;
-            // pt.py[n] = 0;
-
-
             while (1) {
                 for (int m = 0; m < n; m++) {
 
@@ -504,8 +499,6 @@ void Init_Coords(int flag, Particle pt, Parameter PM) {
                     break; 
                 }
             }
-
-            //cout << u(e)<<"," << PM.boxX <<"," << pt.x[n] << endl;
         }
     }
     else if (flag == 2) {
@@ -681,7 +674,7 @@ void ABParticleField::ParticleToField(int i_field) {
     getABParticlePxPy<<<Ny,Nx>>>(PT,PM,Nx,Ny);
     updateConcentration << <Ny,Nx>> > (PT, PM,(*ptr_Pxx).f[i_field],(*ptr_Pxy).f[i_field],(*ptr_C1).f[i_field],Nx, Ny, Nbx, Nby);
     // printf("1");
-     for (int t2 = 0; t2 <100; t2++){
+     for (int t2 = 0; t2 <30; t2++){
         (*ptr_C1).applyBounCondPeriGPU((*ptr_C1).f[i_field]);
         smoothConcentration << <Ny,Nx>> > (PM,(*ptr_C1).f[i_field],(*ptr_Pxx).f[i_field],(*ptr_Pxy).f[i_field],Nx,Ny,Nbx,Nby);
     };

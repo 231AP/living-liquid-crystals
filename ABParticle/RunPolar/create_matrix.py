@@ -4,7 +4,7 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 
-savenames = ["test10",]
+savenames = ["test34",]
 
 for savename in savenames:
     datadir = "../data/"+savename+"/"
@@ -103,9 +103,10 @@ lenth_x = 128
 lenth_y = 128
 
 L = 16
-anxx,anxy = CreateMatrixF(lenth_x,lenth_y,L)
+anxx,anxy =  CreateMatrixC(lenth_x,lenth_y,L)
+anxx,anxy =  CreateMatrixF(lenth_x,lenth_y,L)
 # anxx,anxy = CreateZeros(lenth_x,lenth_y,L)
-# anxx,anxy = CreateMatrixS1(lenth_x,lenth_y,L)
+anxx,anxy = CreateMatrixS1(lenth_x,lenth_y,L)
 
 # np.savetxt(savedir+'anchx_0.dat', anxx, fmt='%f')
 # np.savetxt(savedir+'anchy_0.dat', anxy, fmt='%f')
@@ -117,20 +118,20 @@ np.savetxt(datadir+'abParticle.Qxy_0.dat', anxy, fmt='%f')
 
 
 
-fig = plt.figure(figsize = [20,20])
-ax = fig.add_subplot(1,1,1)
-anchx_df = pd.read_csv(datadir + "anchx_0.dat",header = None)
-anchy_df = pd.read_csv(datadir + "anchy_0.dat",header = None)
-anchx = np.array(anchx_df).reshape(size,-1,order = "F").T
-anchy = np.array(anchy_df).reshape(size,-1,order = "F").T
-A2 = 4*anchx**2+4*anchy**2
-X,Y = np.meshgrid(np.arange(size),np.arange(size))
-cut_size = 4
-theta2 = 0.5 * np.arctan2(anchy,anchx)
-a1 = np.cos(theta2)
-a2 = np.sin(theta2)
-a1cut = a1[::cut_size,::cut_size]
-a2cut = a2[::cut_size,::cut_size]
-im = ax.imshow(A2,vmax =0.9,vmin= 0,norm=None,origin="lower")
-ax.quiver(X[::cut_size,::cut_size],Y[::cut_size,::cut_size],a1cut,a2cut,color = "red" ,angles='xy', scale_units='xy', scale=1/6, headwidth=0, headlength=0 ,headaxislength=0, pivot='middle')
-plt.savefig(savedir+'anchor.png')
+# fig = plt.figure(figsize = [20,20])
+# ax = fig.add_subplot(1,1,1)
+# anchx_df = pd.read_csv(datadir + "anchx_0.dat",header = None)
+# anchy_df = pd.read_csv(datadir + "anchy_0.dat",header = None)
+# anchx = np.array(anchx_df).reshape(size,-1,order = "F").T
+# anchy = np.array(anchy_df).reshape(size,-1,order = "F").T
+# A2 = 4*anchx**2+4*anchy**2
+# X,Y = np.meshgrid(np.arange(size),np.arange(size))
+# cut_size = 4
+# theta2 = 0.5 * np.arctan2(anchy,anchx)
+# a1 = np.cos(theta2)
+# a2 = np.sin(theta2)
+# a1cut = a1[::cut_size,::cut_size]
+# a2cut = a2[::cut_size,::cut_size]
+# im = ax.imshow(A2,vmax =0.9,vmin= 0,norm=None,origin="lower")
+# ax.quiver(X[::cut_size,::cut_size],Y[::cut_size,::cut_size],a1cut,a2cut,color = "red" ,angles='xy', scale_units='xy', scale=1/6, headwidth=0, headlength=0 ,headaxislength=0, pivot='middle')
+# plt.savefig(savedir+'anchor.png')

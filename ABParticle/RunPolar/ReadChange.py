@@ -18,20 +18,15 @@ def ReadChange(targetdir,keywords,UseWords):
             f.write(UseWords[i])
             f.flush()
     return 0
-            
+                                 
   
   
   
 basedir = "./"
 datadir = basedir
 names = ["../src/field/ABParticle/ABParticleFieldClass.cu","bacteriaPolar.cu","create_matrix.py","DrawTurbulence.py","visual_video.py","Bash.sh"]
-# AA = -20
-# NumParticles = 800
 for name in names:
-    # print(name)
-    # keywords = ["AA","NumParticles"]
-    # usewords = [AA,NumParticles]
-    ReadChange(datadir+name,["test"],["10"])
+    ReadChange(datadir+name,["test"],["34"])
 # names1 = []
 # for name in names1:
 #     print(name)
