@@ -191,8 +191,8 @@ __global__ void updateConcentration(Particle PT,Parameter PM,double* Pxx, double
             int kk1 =(i+x+PM.cellNumX)%PM.cellNumX;
             int kk2 = (j+y+PM.cellNumY)%PM.cellNumY;
             C1[idx] += a1*PT.cellOffsetsCL[(kk1)*blockDim.x+(kk2)];
-            // Pxx[idx] += a1*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
-            // Pxy[idx] += a1*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
+            Pxx[idx] += a1*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
+            Pxy[idx] += a1*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
         }
         }
         for (int x = -2;x <= 2;x++) {
@@ -200,8 +200,8 @@ __global__ void updateConcentration(Particle PT,Parameter PM,double* Pxx, double
             int kk1 =(i+x+PM.cellNumX)%PM.cellNumX;
             int kk2 = (j+y+PM.cellNumY)%PM.cellNumY;
             C1[idx] += a2*PT.cellOffsetsCL[(kk1)*blockDim.x+(kk2)];
-            // Pxx[idx] += a2*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
-            // Pxy[idx] += a2*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
+            Pxx[idx] += a2*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
+            Pxy[idx] += a2*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
         }
         }
 
@@ -210,8 +210,8 @@ __global__ void updateConcentration(Particle PT,Parameter PM,double* Pxx, double
             int kk1 =(i+x+PM.cellNumX)%PM.cellNumX;
             int kk2 = (j+y+PM.cellNumY)%PM.cellNumY;
             C1[idx] += a3*PT.cellOffsetsCL[(kk1)*blockDim.x+(kk2)];
-            // Pxx[idx] += a3*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
-            // Pxy[idx] += a3*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
+            Pxx[idx] += a3*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
+            Pxy[idx] += a3*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
         }
         }
 
@@ -220,8 +220,8 @@ __global__ void updateConcentration(Particle PT,Parameter PM,double* Pxx, double
             int kk1 =(i+x+PM.cellNumX)%PM.cellNumX;
             int kk2 = (j+y+PM.cellNumY)%PM.cellNumY;
             C1[idx] += a4*PT.cellOffsetsCL[(kk1)*blockDim.x+(kk2)];
-            // Pxx[idx] += a4*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
-            // Pxy[idx] += a4*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
+            Pxx[idx] += a4*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
+            Pxy[idx] += a4*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
             
         }
         }
@@ -231,8 +231,8 @@ __global__ void updateConcentration(Particle PT,Parameter PM,double* Pxx, double
             int kk1 =(i+x+PM.cellNumX)%PM.cellNumX;
             int kk2 = (j+y+PM.cellNumY)%PM.cellNumY;
             C1[idx] += a5*PT.cellOffsetsCL[(kk1)*blockDim.x+(kk2)];
-            // Pxx[idx] += a5*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
-            // Pxy[idx] += a5*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
+            Pxx[idx] += a5*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxx[(kk1)*blockDim.x+(kk2)];
+            Pxy[idx] += a5*PT.cellOffsetsCL[kk1*blockDim.x+kk2]*PT.cellPxy[(kk1)*blockDim.x+(kk2)];
             
         }
         }
@@ -288,7 +288,7 @@ __global__ void smoothConcentration(Parameter PM,double* C1,double* Pxx,double* 
     int di = blockDim.x+2*Nbx;
     float dt11 = 0.01;
     float Dc = 10;
-    float Dp = 0;
+    float Dp = 10;
     
     if (i<Ny && j<Nx) { 
         C1[idx] += dt11 * Dc * LaplO4I(C1,di,idx);
@@ -510,6 +510,10 @@ __global__ void checkUpdate(Particle PT, Parameter PM) {
     // dy1 = sign01(0.5 * PM.boxY - dy1) * dy1 + sign01(dy1 - 0.5 * PM.boxY) * (PM.boxY - dy1);
     // if ((dx * dx + dy * dy) > PM.rOutUpdateList1 * PM.rOutUpdateList1) atomicExch(&updateListFlag, 1);
 }
+//====================================================================
+__device__ real generateNormal(curandState* state) {
+    return curand_normal(&(*state));
+}
 
 //=========================================================================
 __global__ void getForce (Particle PT, Parameter PM, double* vx, double* vy, double* Pxx, double* Pxy, double* Qxx, double* Qxy,
@@ -555,7 +559,7 @@ __global__ void getForce (Particle PT, Parameter PM, double* vx, double* vy, dou
         // f12 = 0.01/pow(dr,6);
         // f12 = 24 * PM.epsilon * pow(PM.r0, 6) * (2 * pow(PM.r0, 6) - pow(dr, 6)) / pow(dr, 14);
         if(dr<PM.rd){
-            f12 = 10/pow(dr,4);
+            f12 = 1*(PM.rd-dr);
             // f12 = 0;
             PT.fx[id] += f12 * dx;
             PT.fy[id] += f12 * dy;
@@ -584,6 +588,11 @@ __global__ void getForce (Particle PT, Parameter PM, double* vx, double* vy, dou
         theta1 += 10*SQ*sin(2*theta - 2*theta1)*PM.tStep;
         PT.px[id] = cos(theta1);
         PT.py[id] = sin(theta1);
+        // if (generateNormal(&PT.state[id])>8){
+        //     // printf("%f",generateNormal(&PT.state[id]));
+        //     PT.px[id] *= -1;
+        //     PT.py[id] *= -1;
+        // }
     if (PT.fx[id] > 10000 || PT.fx[id] < -10000) {
         printf("wrong!!!!!!!!!id:%d,fx:%f,fy:%f,dx:%f,dy:%f,x0:%f,x1:%f,y0:%f,y1:%f,NLFX:%d\n", id,PT.fx[id], PT.fy[id], dx,dy,x0,x1, y0, y1, PT.NeighborListFlagX[id * PM.maxParticlePerCell + idNL]);
         wrongFlag = 1;
@@ -594,17 +603,13 @@ __global__ void getForce (Particle PT, Parameter PM, double* vx, double* vy, dou
     }
 }
 
-//====================================================================
-__device__ real generateNormal(curandState* state) {
-    return curand_normal(&(*state));
-}
 
 //==========================================================================================================
 __global__ void updatePosition(Particle PT, Parameter PM) {
     int id = blockIdx.x * blockDim.x + threadIdx.x;
     if (id >= PM.particleNum)return;
     real fT = sqrt(2 * PM.kBT * PM.gammaValue * PM.tStep);
-    real fT1 = 0.3*sqrt(2 * PM.kBT * PM.gammaValue * PM.tStep);
+    real fT1 = 0.2*sqrt(2 * PM.kBT * PM.gammaValue * PM.tStep);
     real FRx = generateNormal(&PT.state[id]);
     real FRy = generateNormal(&PT.state[id]);
     real PRx = generateNormal(&PT.state[id]);
